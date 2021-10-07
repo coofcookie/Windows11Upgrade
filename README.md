@@ -1,5 +1,5 @@
 # Windows11Upgrade
-Windows 11 Upgrade tool that bypasses Microsoft´s requirements
+Windows 11 Upgrade tool that bypasses new Microsoft´s requirements
 
 ![AppMain](https://user-images.githubusercontent.com/43541350/136449814-ab0bd33c-d692-4fd1-a575-6d48f52769d4.png)
 
