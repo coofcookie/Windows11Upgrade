@@ -27,3 +27,7 @@ Windows 11 Upgrade tool that bypasses new Microsoft´s requirements
 Windows11Upgrade is free and open source software, it is using the GPL-3.0 license.
 
 See [LICENSE](LICENSE) for the full license text.
+
+#Credits
+
+Credits to [AveYo](https://gist.github.com/AveYo) for bypass
