@@ -28,6 +28,6 @@ Windows11Upgrade is free and open source software, it is using the GPL-3.0 licen
 
 See [LICENSE](LICENSE) for the full license text.
 
-#Credits
+## Credits
 
-Credits to [AveYo](https://gist.github.com/AveYo) for bypass
+Credits to [AveYo](https://gist.github.com/AveYo) for bypass.
