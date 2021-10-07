@@ -1,0 +1,430 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.Security.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\ConvertFrom-SecureString command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.SecureString">
+            <summary>
+            Provides access to the SecureString parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.SecureKey">
+            <summary>
+            Provides access to the SecureKey parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertFromSecureString.Key">
+            <summary>
+            Provides access to the Key parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.ConvertToSecureString">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\ConvertTo-SecureString command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.String">
+            <summary>
+            Provides access to the String parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.AsPlainText">
+            <summary>
+            Provides access to the AsPlainText parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.SecureKey">
+            <summary>
+            Provides access to the SecureKey parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.ConvertToSecureString.Key">
+            <summary>
+            Provides access to the Key parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.GetAcl">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Get-Acl command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetAcl.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetAcl.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.Audit">
+            <summary>
+            Provides access to the Audit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.AllCentralAccessPolicies">
+            <summary>
+            Provides access to the AllCentralAccessPolicies parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAcl.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Get-AuthenticodeSignature command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature.FilePath">
+            <summary>
+            Provides access to the FilePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetAuthenticodeSignature.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Get-ExecutionPolicy command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy.Scope">
+            <summary>
+            Provides access to the Scope parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetExecutionPolicy.List">
+            <summary>
+            Provides access to the List parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.GetPfxCertificate">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Get-PfxCertificate command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetPfxCertificate.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.GetPfxCertificate.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetPfxCertificate.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetPfxCertificate.FilePath">
+            <summary>
+            Provides access to the FilePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.GetPfxCertificate.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.SetAcl">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Set-Acl command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetAcl.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetAcl.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.AclObject">
+            <summary>
+            Provides access to the AclObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.SecurityDescriptor">
+            <summary>
+            Provides access to the SecurityDescriptor parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.CentralAccessPolicy">
+            <summary>
+            Provides access to the CentralAccessPolicy parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.ClearCentralAccessPolicy">
+            <summary>
+            Provides access to the ClearCentralAccessPolicy parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.Passthru">
+            <summary>
+            Provides access to the Passthru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAcl.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Set-AuthenticodeSignature command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.Certificate">
+            <summary>
+            Provides access to the Certificate parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.IncludeChain">
+            <summary>
+            Provides access to the IncludeChain parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.TimestampServer">
+            <summary>
+            Provides access to the TimestampServer parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.HashAlgorithm">
+            <summary>
+            Provides access to the HashAlgorithm parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.FilePath">
+            <summary>
+            Provides access to the FilePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetAuthenticodeSignature.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Security\Set-ExecutionPolicy command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.ExecutionPolicy">
+            <summary>
+            Provides access to the ExecutionPolicy parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.Scope">
+            <summary>
+            Provides access to the Scope parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Security.Activities.SetExecutionPolicy.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

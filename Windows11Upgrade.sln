@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows11Upgrade", "Windows11Upgrade\Windows11Upgrade.csproj", "{A9F4646B-75A5-4680-86A2-27A006C5C8DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9F4646B-75A5-4680-86A2-27A006C5C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F4646B-75A5-4680-86A2-27A006C5C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F4646B-75A5-4680-86A2-27A006C5C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F4646B-75A5-4680-86A2-27A006C5C8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED0082DA-A71F-46BC-9A3C-E7064419C458}
+	EndGlobalSection
+EndGlobal

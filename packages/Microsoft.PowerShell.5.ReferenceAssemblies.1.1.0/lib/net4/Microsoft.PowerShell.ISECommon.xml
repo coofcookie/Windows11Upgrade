@@ -1,0 +1,1423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.ISECommon</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.FilesShouldBeASingleArgument">
+            <summary>
+              Looks up a localized string similar to To open multiple files, provide a single list of individual file names that are separated by commas..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.OptionNeedsValueFormat">
+            <summary>
+              Looks up a localized string similar to Provide a value for the following option: {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.UnableToRetrieveFullPath">
+            <summary>
+              Looks up a localized string similar to Unable to retrieve the full path corresponding to the following name: {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.CommonStrings.UnknownOption">
+            <summary>
+              Looks up a localized string similar to There is no option with the following name: {0}..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser">
+            <summary>
+            Helper that parses command line arguments
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.HelpStr">
+            <summary>Help switch string</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.HelpShortStr">
+            <summary>Smallest unambiguous substring of the Help switch</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.QuestionMarkStr">
+            <summary>Alternative for the help switch string</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.MTAStr">
+            <summary>mta switch string</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.MTAShortStr">
+            <summary>Smallest unambiguous substring of the mta switch</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.NoProfileStr">
+            <summary>noprofile switch string</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.NoProfileShortStr">
+            <summary>Smallest unambiguous substring of the noprofile switch</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.FilesStr">
+            <summary>Files switch string</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.FileShortStr">
+            <summary>Smallest unambiguous substring of the Files switch</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.mta">
+            <summary>
+            value indicating whether we are using the MTA option in PowerShellTabs
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.noProfile">
+            <summary>
+            Value indicating we should not run the profile
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.help">
+            <summary>
+            value indicating whether we run the profile for PowerShellTabs
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.files">
+            <summary>
+            Files passed to the command line
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.hasProcessedFiles">
+            <summary>
+            Value indicating the -file option has already been processed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.Parse(System.String[])">
+            <summary>
+            Parses the arguments setting the value used in internal properties of this class
+            </summary>
+            <param name="args">command line arguments</param>
+            <exception cref="T:System.InvalidOperationException">For any parsing error.</exception>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.ArgumentMatchesSwitch(System.String,System.String,System.String)">
+            <summary>
+            Returns true if <paramref name="argument"/> matches <paramref name="switchCandidate"/>.
+            </summary>
+            <param name="argument">The argument (no dash) we want to check for matches</param>
+            <param name="switchCandidate">The switch candidate like "help"</param>
+            <param name="smallestUnambiguousMatchForSwitchCandidate">
+            The smallest substring of switchCandidate that is large enough to disambiguate
+            switchCandidate from any other switch
+            </param>
+            <returns>true if <paramref name="argument"/> matches <paramref name="switchCandidate"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.TryGetFullPath(System.String)">
+            <summary>
+            Gets the full path corresponding to filePath or null if it could not be retrieved
+            </summary>
+            <param name="filePath">path we want to retrieve the full path from</param>
+            <returns>the full path corresponding to filePath or null if it could not be retrieved</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.AddCurrentFile(System.Text.StringBuilder)">
+            <summary>
+            Adds currentFile to the list if able to retrieve a full path from it
+            otherwise returns an error message
+            </summary>
+            <param name="currentFile">file to be added to the list</param>
+            <returns>null if there were no errors</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.GetFileNames(System.String)">
+            <summary>
+            Splits commaSeparatedFiles into the individual files
+            </summary>
+            <param name="commaSeparatedFiles">list of files separated by comma</param>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.ProcessFiles(System.String)">
+            <summary>
+            Calls GetFileNames and checks/sets hasProcessedFiles
+            </summary>
+            <param name="filesString">comma separated list of files</param>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.Mta">
+            <summary>
+            Gets a value indicating whether we use the MTA option in PowerShellTabs
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.NoProfile">
+            <summary>
+            Gets a value indicating whether we run the profile for PowerShellTabs
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.Help">
+            <summary>
+            Gets a value indicating whether we should diaplay a help message
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.Files">
+            <summary>
+            Gets the files passed to the command line
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters">
+            <summary>
+            Helper class defining special characters and providing char matching methods
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.EnDash">
+            <summary>
+            Type of dash #1
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.EmDash">
+            <summary>
+            Type of dash #2
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.HorizontalBar">
+            <summary>
+            Type of dash #3
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.QuoteDoubleLeft">
+            <summary>
+            left double quotation mark
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.QuoteDoubleRight">
+            <summary>
+            right double quotation mark
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.QuoteLowDoubleLeft">
+            <summary>
+            low double left quote used in german.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.IsDashOrSlash(System.Char)">
+            <summary>
+            Returns true if c is a dash or slash character
+            </summary>
+            <param name="c">character to check</param>
+            <returns>true if c is a dash or slash character</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.ISECommandLineParser.SpecialCharacters.IsDoubleQuote(System.Char)">
+            <summary>
+            Returns true if c is a double quote character
+            </summary>
+            <param name="c">character to check</param>
+            <returns>true if c is a double quote character</returns>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient">
+            <summary>
+            Sends a message to the namemed pipe server with a file to open.
+            The thought behind not throwing exceptions from the named pipe functionality is to
+            go ahead with a fresh instance of GPowerShell if for some reason the named pipes did not work.
+            This is a static class as opposed to a class that would call CreateFile in one Method/Constructor
+            and a WriteFile in another because a client CreateFile will block the Server in a ReadFile
+            so the client always has to follow a succeded CreateFile with a WriteFile.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.ServerBusyTimeout">
+            <summary>
+            Client timeout in milliseconds to wait for the server to be free
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.pipeHandle">
+            <summary>
+            Pipe handle used in SendString()
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.testClientPauseEvent">
+            <summary>
+            Event allowing tests to pause the listening stages of the server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.testPauseEvent">
+            <summary>
+            Event allowing tests to pause untill the server is about to wait on testServerPauseEvent
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.SendString(System.String)">
+            <summary>
+            Tries to send a string through the pipe. That is the only relyable way to know if the server is available.
+            A client call to CreateFile will put the server in a blocked call to ReadFile so the propper way
+            to test the server is by both creating the file and sending a string.
+            To just test the presence of a server this method should be called with NLStrings.PipeNoOp that
+            will be sent to the server and ignored by the server.
+            </summary>
+            <param name="str">string to be sent</param>
+            <returns>true if we succeeded sending the string</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.TestPause">
+            <summary>
+            Informs tests it is about to wait on testClientPauseEvent by setting testPauseEvent and
+            waits on this.testClientPauseEvent, if both events are present.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.GetPipeName">
+            <summary>
+            Retrieves the existing pipe name or null if there is no current pipe name
+            </summary>
+            <returns> the existing pipe name or null if there is no current pipe name.</returns>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.PipeHandle">
+            <summary>
+            Gets the pipe handle used in SendString
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.TestClientPauseEvent">
+            <summary>
+            Gets or sets an event allowing tests to pause the stages of the client.
+            This should be set before calling SendString.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeClient.TestPauseEvent">
+            <summary>
+            Gets or sets an event allowing tests to pause untill the client is about to wait on testClientPauseEvent.
+            This should be set before calling SendString.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods">
+            <summary>
+            Interop methods, constants and structures needed for named pipes.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_ACCESS_DUPLEX">
+            <summary>
+            The pipe is bi-directional; both server and client processes can read from and write to the pipe.
+            This mode gives the server the equivalent of GENERIC_READ and GENERIC_WRITE access to the pipe.
+            The client can specify GENERIC_READ or GENERIC_WRITE, or both, when it connects to the pipe using the CreateFile function.
+            </summary>    
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_ACCESS_OUTBOUND">
+            <summary>
+            The flow of data in the pipe goes from server to client only. 
+            This mode gives the server the equivalent of GENERIC_WRITE access to the pipe. 
+            The client must specify GENERIC_READ access when connecting to the pipe. 
+            If the client must change pipe settings by calling the SetNamedPipeHandleState function,
+            the client must specify GENERIC_READ and FILE_WRITE_ATTRIBUTES access when connecting to the pipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_ACCESS_INBOUND">
+            <summary>
+            The flow of data in the pipe goes from client to server only. 
+            This mode gives the server the equivalent of GENERIC_READ access to the pipe. 
+            The client must specify GENERIC_WRITE access when connecting to the pipe. 
+            If the client must read pipe settings by calling the GetNamedPipeInfo or 
+            GetNamedPipeHandleState functions, the client must specify GENERIC_WRITE and 
+            FILE_READ_ATTRIBUTES access when connecting to the pipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_TYPE_BYTE">
+            <summary>
+            Data is written to the pipe as a stream of bytes. This mode cannot be used with PIPE_READMODE_MESSAGE.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_TYPE_MESSAGE">
+            <summary>
+            Data is written to the pipe as a stream of messages. This mode can be used with either PIPE_READMODE_MESSAGE or PIPE_READMODE_BYTE.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.FILE_FLAG_OVERLAPPED">
+            <summary>
+            Mode used for Asynchronous IO
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_WAIT">
+            <summary>
+            Blocking mode is enabled. When the pipe handle is specified in the ReadFile, WriteFile, 
+            or ConnectNamedPipe function, the operations are not completed until there is data to read, 
+            all data is written, or a client is connected. Use of this mode can mean waiting indefinitely
+            in some situations for a client process to perform an action.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_NOWAIT">
+            <summary>
+            Nonblocking mode is enabled. In this mode, ReadFile, WriteFile, and ConnectNamedPipe 
+            always return immediately. Note that nonblocking mode is supported for compatibility 
+            with Microsoft LAN Manager version 2.0 and should not be used to achieve asynchronous I/O 
+            with named pipes. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_READMODE_BYTE">
+            <summary>
+            Data is read from the pipe as a stream of bytes. 
+            This mode can be used with either PIPE_TYPE_MESSAGE or PIPE_TYPE_BYTE.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_READMODE_MESSAGE">
+            <summary>
+            Data is read from the pipe as a stream of messages. 
+            This mode can be only used if PIPE_TYPE_MESSAGE is also specified.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_ACCEPT_REMOTE_CLIENTS">
+            <summary>
+            Connections from remote clients can be accepted and checked against the security descriptor for the pipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_REJECT_REMOTE_CLIENTS">
+            <summary>
+            Connections from remote clients are automatically rejected.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.PIPE_UNLIMITED_INSTANCES">
+            <summary>
+            Constant that can be used in the nMaxInstances parameter of CreateNamedPipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_MORE_DATA">
+            <summary>
+            Error result when the message is longer than the read buffer or when the size of the data passes the 
+            64K named pipe write limit
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_PIPE_CONNECTED">
+            <summary>
+            There is a process on other end of the pipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_IO_INCOMPLETE">
+            <summary>
+            Overlapped I/O event is not in a signaled state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_IO_PENDING">
+            <summary>
+            Overlapped I/O operation is in progress.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_NO_DATA">
+            <summary>
+            The pipe is being closed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_BROKEN_PIPE">
+            <summary>
+            The pipe has been ended.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ERROR_PIPE_BUSY">
+            <summary>
+            error returned when a pipe exists but all instances are busy.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.INFINITE">
+            <summary>
+            Infinite timeout
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GENERIC_READ">
+            <summary>
+            Specifies that the desired access is read
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GENERIC_WRITE">
+            <summary>
+            Specifies that the desired access is write
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GENERIC_EXECUTE">
+            <summary>
+            Specifies that the desired access is execute
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GENERIC_ALL">
+            <summary>
+            Specifies that the desired access is all
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CREATE_NEW">
+            <summary>
+            Creates a new file.
+            If the specified file exists, the function fails and the last-error code is set to 
+            ERROR_FILE_EXISTS (80).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CREATE_ALWAYS">
+            <summary>
+            Creates a new file, always.
+            If the specified file exists, the function overwrites the file, clears the existing attributes,
+            combines the specified file attributes and flags with FILE_ATTRIBUTE_ARCHIVE, but does not 
+            set the security descriptor that the SECURITY_ATTRIBUTES structure specifies. The function 
+            succeeds and last-error code is set to ERROR_ALREADY_EXISTS (183).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.OPEN_EXISTING">
+            <summary>
+            Opens a file.
+            If the specified file does not exist, the function fails and the last-error code is set to 
+            ERROR_FILE_NOT_FOUND (2).
+            For more information, see the Remarks section of this topic.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.OPEN_ALWAYS">
+            <summary>
+            Opens a file, always.
+            If the specified file does not exist, the function creates a file as if dwCreationDisposition 
+            is CREATE_NEW.
+            If the specified file exists, the function succeeds and last-error code is set to 
+            ERROR_ALREADY_EXISTS (183).
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TRUNCATE_EXISTING">
+            <summary>
+            Opens a file and truncates it so that its size is zero (0) bytes.
+            If the specified file does not exist, the function fails and the last-error code is set to ERROR_FILE_NOT_FOUND (2).
+            The calling process must open the file with the GENERIC_WRITE access right.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_QUERY">
+            <summary>
+            Constant used to query for token information
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SE_GROUP_LOGON_ID">
+            <summary>
+            Constant specifying the token group attribute corresponding to the logon sid
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TokenGroups">
+            <summary>
+            Constant used to retrieve the token groups
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CreateNamedPipe(System.String,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES)">
+            <summary>
+            Creates an instance of a named pipe and returns a handle for subsequent pipe operations. A named pipe server process uses this function either to create the first instance of a specific named pipe and establish its basic attributes or to create a new instance of an existing named pipe.
+            </summary>
+            <param name="lpName">The unique pipe name. This string must have the following form: \\.\pipe\pipename </param>
+            <param name="dwOpenMode">The open mode. The function fails if dwOpenMode specifies anything other than 0 or the flags in "pipe open mode" below.</param>
+            <param name="dwPipeMode">The pipe mode. The function fails if dwPipeMode specifies anything other than 0 or the flags listed in "pipe mode" below.</param>
+            <param name="nMaxInstances">The maximum number of instances that can be created for this pipe. The first instance of the pipe can specify this value; the same number must be specified for other instances of the pipe. Acceptable values are in the range 1 through PIPE_UNLIMITED_INSTANCES (255).</param>
+            <param name="nOutBufferSize">The number of bytes to reserve for the output buffer.</param>
+            <param name="nInBufferSize">The number of bytes to reserve for the input buffer.</param>
+            <param name="nDefaultTimeOut">The default time-out value, in milliseconds, if the WaitNamedPipe function specifies NMPWAIT_USE_DEFAULT_WAIT. Each instance of a named pipe must specify the same value.</param>
+            <param name="securityAttributes">A pointer to a SECURITY_ATTRIBUTES structure that specifies a security descriptor for the new named pipe and determines whether child processes can inherit the returned handle. If lpSecurityAttributes is NULL, the named pipe gets a default security descriptor and the handle cannot be inherited.</param>
+            <returns>
+            If the function succeeds, the return value is a handle to the server end of a named pipe instance.
+            If the function fails, the return value is INVALID_HANDLE_VALUE. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GetOverlappedResult(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle,System.Threading.NativeOverlapped@,System.UInt32@,System.Boolean)">
+            <summary>
+            Retrieves the results of an overlapped operation on the specified file, named pipe, or communications device.
+            </summary>
+            <param name="hFile">
+            A handle to the file, named pipe, or communications device. This is the same handle that was specified
+            when the overlapped operation was started by a call to the ReadFile, WriteFile, ConnectNamedPipe, 
+            TransactNamedPipe, DeviceIoControl, or WaitCommEvent function.
+            </param>
+            <param name="lpOverlapped">
+            A pointer to an OVERLAPPED structure that was specified when the overlapped operation was started.
+            </param>
+            <param name="lpNumberOfBytesTransferred">
+            A pointer to a variable that receives the number of bytes that were actually transferred by a read or
+            write operation. For a TransactNamedPipe operation, this is the number of bytes that were read from 
+            the pipe. For a DeviceIoControl operation, this is the number of bytes of output data returned by
+            the device driver. For a ConnectNamedPipe or WaitCommEvent operation, this value is undefined.
+            </param>
+            <param name="bWait">
+            If this parameter is TRUE, the function does not return until the operation has been completed. 
+            If this parameter is FALSE and the operation is still pending, the function returns FALSE and 
+            the GetLastError function returns ERROR_IO_INCOMPLETE.
+            </param>
+            <returns>
+            If the function succeeds, the return value is true.
+            If the function fails, the return value is false. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GetCurrentProcess">
+            <summary>
+            Retrieves the current process handle
+            </summary>
+            <returns>The current process handle</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.OpenProcessToken(System.IntPtr,System.UInt32,System.IntPtr@)">
+            <summary>
+            Retrieves the current process token.
+            </summary>
+            <param name="ProcessHandle">process handle</param>
+            <param name="DesiredAccess">token access</param>
+            <param name="TokenHandle">process token</param>
+            <returns>The current process token.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.GetTokenInformation(System.IntPtr,System.Int32,System.IntPtr,System.UInt32,System.UInt32@)">
+            <summary>
+            Gets token information.
+            </summary>
+            <param name="TokenHandle">token to retrieve information from</param>
+            <param name="TokenInformationClass">Kind of information to retrieve</param>
+            <param name="TokenInformation">information retrieved</param>
+            <param name="TokenInformationLength">length of information to be retrieved</param>
+            <param name="ReturnLength">length of information actually retrieved</param>
+            <returns>token information</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ConnectNamedPipe(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle,System.Threading.NativeOverlapped@)">
+            <summary>
+            Enables a named pipe server process to wait for a client process to connect to an instance of a named pipe. 
+            A client process connects by calling either the CreateFile or CallNamedPipe function.
+            </summary>
+            <param name="hNamedPipe">A handle to the server end of a named pipe instance. 
+            This handle is returned by the CreateNamedPipe function.</param>
+            <param name="lpOverlapped">pointer to an OVERLAPPED structure.</param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, 
+            call GetLastError.
+            If a client connects before the function is called, the function returns zero and 
+            GetLastError returns ERROR_PIPE_CONNECTED. This can happen if a client connects in 
+            the interval between the call to CreateNamedPipe and the call to ConnectNamedPipe. 
+            In this situation, there is a good connection between client and server, even though 
+            the function returns zero.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.WaitNamedPipe(System.String,System.UInt32)">
+            <summary>
+            Waits until either a time-out interval elapses or an instance of the specified named pipe is 
+            available for connection (that is, the pipe's server process has a pending ConnectNamedPipe
+            operation on the pipe).
+            </summary>
+            <param name="lpNamedPipeName">
+            The name of the named pipe. The string must include the name of the computer on which the 
+            server process is executing. A period may be used for the servername if the pipe is local. 
+            The following pipe name format is used: 
+            \\servername\pipe\pipename
+            </param>
+            <param name="nTimeOut">
+            The number of milliseconds that the function will wait for an instance 
+            of the named pipe to be available. You can used one of the following 
+            values instead of specifying a number of milliseconds. 
+            </param>
+            <returns>
+            If an instance of the pipe is available before the time-out interval elapses, the return
+            value is nonzero.
+            If an instance of the pipe is not available before the time-out interval elapses,
+            the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.DisconnectNamedPipe(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle)">
+            <summary>
+            Disconnects the server end of a named pipe instance from a client process.
+            </summary>
+            <param name="hNamedPipe">
+            A handle to an instance of a named pipe. This handle must be created by the
+            CreateNamedPipe function.
+            </param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, 
+            call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CloseHandle(System.IntPtr)">
+            <summary>
+            Closes an open object handle.
+            </summary>
+            <param name="hObject">
+            A valid handle to an open object.
+            </param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, 
+            call GetLastError.
+            If the application is running under a debugger, the function will throw an exception 
+            if it receives either a handle value that is not valid or a pseudo-handle value. 
+            This can happen if you close a handle twice, or if you call CloseHandle on a handle
+            returned by the FindFirstFile function.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.ReadFile(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle,System.Byte[],System.UInt32,System.UInt32@,System.Threading.NativeOverlapped@)">
+            <summary>
+            Reads data from a file, and starts at the position that the file pointer indicates. You can use this function for both synchronous and asynchronous operations.
+            </summary>
+            <param name="hFile">A handle to the file to be read.
+            The file handle must be created with the GENERIC_READ access right. For more information, 
+            see File Security and Access Rights.
+            For asynchronous read operations, hFile can be any handle that is opened with the 
+            FILE_FLAG_OVERLAPPED flag by the CreateFile function, or a socket handle returned 
+            by the socket or accept function.
+            </param>
+            <param name="lpBuffer">A pointer to the buffer that receives the data read from a file.</param>
+            <param name="nNumberOfBytesToRead">The maximum number of bytes to be read.</param>
+            <param name="lpNumberOfBytesRead">
+            A pointer to the variable that receives the number of bytes read.
+            If lpOverlapped is NULL, lpNumberOfBytesRead cannot be NULL.
+            If lpOverlapped is not NULL, lpNumberOfBytesRead can be NULL.
+            </param>
+            <param name="lpOverlapped">
+            A pointer to an OVERLAPPED structure.
+            This structure is required if hFile is created with FILE_FLAG_OVERLAPPED.
+            </param>
+            <returns>
+            The ReadFile function returns when one of the following conditions occur: 
+                A write operation completes on the write end of the pipe. 
+                The number of bytes requested is read. 
+                An error occurs. 
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero (0). To get extended error information, 
+            call GetLastError.
+            If the return value is nonzero and the number of bytes read is zero (0), 
+            the file pointer is beyond the current end of the file at the time of the read operation. 
+            However, if the file is opened with FILE_FLAG_OVERLAPPED and lpOverlapped is not NULL, 
+            the return value is zero (0) and GetLastError returns ERROR_HANDLE_EOF when the file 
+            pointer goes beyond the current end of file.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.WriteFile(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle,System.Byte[],System.UInt32,System.UInt32@,System.IntPtr)">
+            <summary>
+            Writes data to the specified file at the position specified by the file pointer. This function is designed for both synchronous and asynchronous operation.
+            </summary>
+            <param name="hFile">
+            A handle to the file. The file handle must have been created with the 
+            GENERIC_WRITE access right. For more information, see File Security and Access Rights. 
+            </param>
+            <param name="lpBuffer">A pointer to the buffer containing the data to be written to the file.</param>
+            <param name="nNumberOfBytesToWrite">
+            The number of bytes to be written to the file. 
+            A value of zero specifies a null write operation. The behavior of a null write operation 
+            depends on the underlying file system.
+            To truncate or extend a file, use the SetEndOfFile function.
+            Named pipe write operations across a network are limited to 65,535 bytes.
+            </param>
+            <param name="lpNumberOfBytesWritten">
+            A pointer to the variable that receives the number of bytes written. WriteFile sets this 
+            value to zero before doing any work or error checking. 
+            If lpOverlapped is NULL, lpNumberOfBytesWritten cannot be NULL. If lpOverlapped is not NULL,
+            lpNumberOfBytesWritten can be NULL. If this is an overlapped write operation, you can get 
+            the number of bytes written by calling GetOverlappedResult. If hFile is associated with an 
+            I/O completion port, you can get the number of bytes written by calling 
+            GetQueuedCompletionStatus.
+            If I/O completion ports are used and you are using a callback routine to free
+            the memory allocated to the OVERLAPPED structure pointed to by the lpOverlapped 
+            parameter, specify NULL as the value of this parameter to avoid a memory corruption
+            problem during the deallocation. This memory corruption problem will cause an invalid 
+            number of bytes to be returned in this parameter.
+            </param>
+            <param name="lpOverlapped">
+            A pointer to an OVERLAPPED structure. This structure is required if hFile was opened with 
+            FILE_FLAG_OVERLAPPED. 
+            If hFile was opened with FILE_FLAG_OVERLAPPED, the lpOverlapped parameter must not be NULL. 
+            It must point to a valid OVERLAPPED structure. If hFile was opened with 
+            FILE_FLAG_OVERLAPPED and lpOverlapped is NULL, the function can incorrectly report that 
+            the write operation is complete.
+            If hFile was opened with FILE_FLAG_OVERLAPPED and lpOverlapped is not NULL, 
+            the write operation starts at the offset specified in the OVERLAPPED structure and 
+            WriteFile may return before the write operation has been completed. In this case, 
+            WriteFile returns FALSE and the GetLastError function returns ERROR_IO_PENDING. This
+            allows the calling process to continue processing while the write operation is being
+            completed. The event specified in the OVERLAPPED structure is set to the signaled state
+            upon completion of the write operation. The caller must adjust the position of the file
+            pointer upon completion.
+            </param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CreateFile(System.String,System.UInt32,System.UInt32,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)">
+            <summary>
+            Creates or opens a file, file stream, directory, physical disk, volume, console buffer,
+            tape drive, communications resource, mailslot, or named pipe. The function returns a 
+            handle that can be used to access the object.
+            </summary>
+            <param name="lpFileName">
+            The name of the object to be created or opened.
+            In the ANSI version of this function, the name is limited to MAX_PATH characters. 
+            To extend this limit to 32,767 wide characters, call the Unicode version of the 
+            function and prepend "\\?\" to the path. For more information, see Naming a File. 
+            For information on special device names, see Defining an MS-DOS Device Name.
+            To specify a COM port number greater than 9, use the following syntax: "\\.\COM10". 
+            This syntax works for all port numbers and hardware that allows COM port numbers to be specified.
+            To create a file stream, specify the name of the file, a colon, and then the name of the
+            stream. For more information, see File Streams.
+            </param>
+            <param name="dwDesiredAccess">
+            The access to the object, which can be read, write, or both.
+            You cannot request an access mode that conflicts with the sharing mode that is 
+            specified in an open request that has an open handle.
+            If this parameter is zero (0), the application can query file and device attributes 
+            without accessing a device. This is useful for an application to determine the size 
+            of a floppy disk drive and the formats it supports without requiring a floppy in a drive.
+            It can also be used to test for the existence of a file or directory without opening
+            them for read or write access.
+            See the "CreateFile desired access" below.
+            </param>
+            <param name="dwShareMode">
+            The sharing mode of an object, which can be read, write, both, or none.
+            You cannot request a sharing mode that conflicts with the access mode that is specified 
+            in an open request that has an open handle, because that would result in the following 
+            sharing violation: ERROR_SHARING_VIOLATION. 
+            If this parameter is zero (0) and CreateFile succeeds, the object cannot be shared 
+            and cannot be opened again until the handle is closed. For more information, see the 
+            Remarks section of this topic.
+            The sharing options remain in effect until you close the handle to an object.
+            To enable a process to share an object while another process has the object open,
+            use a combination of one or more of the following values to specify the access mode
+            they can request to open the object. 
+            </param>
+            <param name="SecurityAttributes">
+            A pointer to a SECURITY_ATTRIBUTES structure that determines whether or not the returned 
+            handle can be inherited by child processes.
+            If lpSecurityAttributes is NULL, the handle cannot be inherited.
+            The lpSecurityDescriptor member of the structure specifies a security descriptor
+            for an object. If lpSecurityAttributes is NULL, the object gets a default security descriptor. 
+            The access control lists (ACL) in the default security descriptor for a file or directory 
+            are inherited from its parent directory.
+            The target file system must support security on files and directories for this parameter to
+            have an effect on them, which is indicated when GetVolumeInformation returns FS_PERSISTENT_ACLS.
+            CreateFile ignores lpSecurityDescriptor when opening an existing file, but continues to 
+            use the other structure members.
+            </param>
+            <param name="dwCreationDisposition">
+            An action to take on files that exist and do not exist. 
+            See "CreateFile creation disposition" below
+            </param>
+            <param name="dwFlagsAndAttributes">
+            The file attributes and flags.
+            This parameter can include any combination of the file attributes. 
+            All other file attributes override FILE_ATTRIBUTE_NORMAL.
+            When CreateFile opens a file, it combines the file flags with existing 
+            file attributes, and ignores any supplied file attributes.
+            </param>
+            <param name="hTemplateFile">
+            A handle to a template file with the GENERIC_READ access right. 
+            The template file supplies file attributes and extended attributes for the file that is
+            being created. This parameter can be NULL.
+            When opening an existing file, CreateFile ignores the template file.
+            When opening a new EFS-encrypted file, the file inherits the DACL from its parent directory.
+            </param>
+            <returns>
+            If the function succeeds, the return value is an open handle to a specified file. 
+            If a specified file exists before the function call and dwCreationDisposition is CREATE_ALWAYS
+            or OPEN_ALWAYS, a call to GetLastError returns ERROR_ALREADY_EXISTS, even when the 
+            function succeeds. If a file does not exist before the call, GetLastError returns zero (0).
+            If the function fails, the return value is INVALID_HANDLE_VALUE. 
+            To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SetEvent(System.IntPtr)">
+            <summary>
+            Sets the specified event object to the signaled state.
+            </summary>
+            <param name="hEvent">
+            A handle to the event object. The CreateEvent or OpenEvent function returns this handle. The handle 
+            must have the EVENT_MODIFY_STATE access right. For more information, see Synchronization Object S
+            ecurity and Access Rights.
+            </param>
+            <returns>
+            If the function succeeds, the return value is true.
+            If the function fails, the return value is false. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.CreateEvent(System.IntPtr,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            Creates or opens a named or unnamed event object.
+            </summary>
+            <param name="lpEventAttributes">
+            A pointer to a SECURITY_ATTRIBUTES structure. If this parameter is NULL, the handle cannot be inherited
+            by child processes. 
+            </param>
+            <param name="bManualReset">
+            If this parameter is TRUE, the function creates a manual-reset event object, which requires the use
+            of the ResetEvent function to set the event state to nonsignaled. If this parameter is FALSE, 
+            the function creates an auto-reset event object, and system automatically resets the event state
+            to nonsignaled after a single waiting thread has been released. 
+            </param>
+            <param name="bInitialState">
+            If this parameter is TRUE, the initial state of the event object is signaled; otherwise, it is nonsignaled. 
+            </param>
+            <param name="lpName">
+            The name of the event object. The name is limited to MAX_PATH characters. Name comparison is case sensitive. 
+            </param>
+            <returns>
+            If the function succeeds, the return value is a handle to the event object. If the named event object 
+            existed before the function call, the function returns a handle to the existing object 
+            and GetLastError returns ERROR_ALREADY_EXISTS. If the function fails, the return value is NULL.
+            To get extended error information, call GetLastError. 
+            </returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.WaitForMultipleObjects(System.UInt32,System.IntPtr[],System.Boolean,System.UInt32)">
+            <summary>
+            Waits until one or all of the specified objects are in the signaled state or the time-out interval elapses.
+            </summary>
+            <param name="nCount">
+            The number of object handles in the array pointed to by lpHandles. 
+            The maximum number of object handles is MAXIMUM_WAIT_OBJECTS.
+            </param>
+            <param name="lpHandles">
+            An array of object handles.The array can contain handles to objects of different types. I
+            t may not contain multiple copies of the same handle. If one of these handles is closed while
+            the wait is still pending, the function's behavior is undefined.The handles must have the SYNCHRONIZE 
+            access right. For more information, see Standard Access Rights.
+            </param>
+            <param name="bWaitAll">
+            If this parameter is TRUE, the function returns when the state of all objects in the lpHandles 
+            array is signaled. If FALSE, the function returns when the state of any one of the objects
+            is set to signaled. In the latter case, the return value indicates the object whose state caused 
+            the function to return.
+            </param>
+            <param name="dwMilliseconds">
+            The time-out interval, in milliseconds. The function returns if the interval elapses, even 
+            if the conditions specified by the bWaitAll parameter are not met. If dwMilliseconds is zero,
+            the function tests the states of the specified objects and returns immediately. If dwMilliseconds 
+            is INFINITE, the function's time-out interval never elapses.
+            </param>
+            <returns>
+            If the function succeeds, the return value indicates the event that caused the function to return. 
+            It can be one of the following values. (Note that WAIT_OBJECT_0 is defined as 0 and WAIT_ABANDONED_0
+            is defined as 0x00000080L.)
+            </returns>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SID_AND_ATTRIBUTES">
+            <summary>
+            Sid and attributes structure.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SID_AND_ATTRIBUTES.Sid">
+            <summary>
+            A pointer to a SID structure.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SID_AND_ATTRIBUTES.Attributes">
+            <summary>
+            Specifies attributes of the SID. This value contains up to 32 one-bit flags. Its meaning depends on the definition and use of the SID.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPSStart">
+            <summary>
+            This is not equivalent to TOKEN_GROUPS
+            For that we would need Groups to be defined as:
+                [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
+            To reflect the legacy ANYSIZE_ARRAY but that would only allow
+            us to read the first array element.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPSStart.GroupCount">
+            <summary>
+            Count of groups
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPSStart.Groups">
+            <summary>
+            PlaceHolder for the real IntPtr retrieved by doing some calculation
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPS">
+            <summary>
+            This is the structure returned from a GetTokenInformation asking for TokenGroups
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPS.GroupCount">
+            <summary>
+            Count of groups
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.TOKEN_GROUPS.FirstGroup">
+            <summary>
+            ARRAY_ANYSIZE is the actual unmanaged size, which is defined as 1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES">
+            <summary>
+            Security attributes
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES.NLength">
+            <summary>
+            The size, in bytes, of this structure. Set this value to the size of the SECURITY_ATTRIBUTES structure.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES.LPSecurityDescriptor">
+            <summary>
+            A pointer to a security descriptor for the object that controls the sharing of it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES.InheritHandle">
+            <summary>
+            A Boolean value that specifies whether the returned handle is inherited when a new process is created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NativeMethods.SECURITY_ATTRIBUTES.#ctor">
+            <summary>
+            Initializes a new instance of the SECURITY_ATTRIBUTES class
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle">
+            <summary>
+            SafeHandle class for named pipes
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle.#ctor">
+            <summary>
+            Prevents a default instance of the NamedPipeSafeHandle class from being created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeSafeHandle.ReleaseHandle">
+            <summary>
+            Calls NativeMethods.CloseHandle(handle)
+            </summary>
+            <returns>the return of NativeMethods.CloseHandle(handle)</returns>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer">
+            <summary>
+            Listens to a specific named pipe for messages to open new files.
+            Error treatment:
+                The thoght behind not throwing exceptions from the named pipe functionality is to
+                go ahead with a fresh instance of PowerShell ISE if, for some reason, the named pipes did not work.
+            Client and Server Dynamic:
+                Each instance that receives no file name as a parameter starts a new server.
+                If the instance received a file name as a parameter, it will try to send the file name to an existing instance.
+                If it succeded, it terminates itself before creating a window. If it did not succede, it creates a new window and
+                a new server, so that any window of the ISE that is UP has a server running. This means that when an instance of
+                powershell_ise.exe is closed, any other instance still running, will be listening for future files sent to the pipe.
+                A client never just opens the pipe. It always opens the pipe and sends a string since an open will cause the server to 
+                get out of its ConnectNamedPipe and go to its ReadFile which would make it unavailable to recieve further 
+                connection/mesages.
+            Pipe Security:
+                The pipe has to be secured with the current logon sid, since the same user can use remote desktop
+                to connect to the same machine (at least in Windows Server 2003). This is the recommended way to secure named
+                pipes in the Named Pipe documentation. IntPtr.Zero would cause even other users logged on to the same box
+                to be able to open the pipe and send file names to be opened on the instance of powershell.exe runing under 
+                the current user.
+            Pipe Name: 
+                Because the pipe is secured with the logon sid, the same name, like "PowerShellISEPipeName" cannot be used
+                for the pipe in all logon sids. This would cause the second user logged on to get access denied to the pipe,
+                which would mean it would not be able to create a pipe server, and would not be able to receive pipe messages.
+                We could name the pipe with the logon sid, but it is unclear if this is priviledged information and pipe names
+                are very public. The recommendation to prevent pipe name squatting is to use a guid for the name, but the name
+                also has to be published to the pipe clients. The solution is to create a file in a well known place that
+                publishes the name of the pipe. The file path includes the logon sid, so clients within that logon sid have
+                a per logon session place to look for the current pipe name. The fact that the file is opened under the
+                application local storage of the current user (the file has access rights to the current user) will prevent
+                other users to see the logon sid of the current user. HKCU in the registry would also work.
+                All servers share the same pipe name except for the detail below.
+                Detail on the pipe name: There are 2 pipe names actually, since if we are running as admin, a different name is
+                used than when running as a regular user. This is not a security feature, but it lets "powershell_ise.exe filename.ps1"
+                send filename.ps1 to an admin powershell_ise.exe when it is started from an application running as admin, which is a nice feature.
+            Clearing up the file used to publish the logon name:
+                Each server cannot directly delete the file that publishes the pipe name, since other servers might be answering for
+                the same pipe name (See Client and Server Dynamic). This means that each server increments a reference count to the file
+                (which is actually maintained inside the file). When the count is zero (or one before the decrement) the file can be deleted.
+                When the file is deleted, if the file parent's directory (which is named after the logon sid) has no other files 
+                (it can have up to 2 files, one for admin and another for non admin as mentioned in the Pipe Name session detail), 
+                it is also deleted.
+                If, when a server starts it could not send a message to an existing server, it will assume it is the first server and reset 
+                the reference count in the file that publishes the pipe name to 1. This allows for a new instance to delete previous files
+                created by other instances (in the same logon session) that have been terminated forcefully before decrementing their 
+                reference count.
+            Stopping the server operation:
+                The NamedPipeServer is asynchronous and yet it is not. It is asynchronous because it uses the overlapped
+                structure that makes it asynchronous. It is not asynchronous because after each operation it locks on
+                a WaitForMultipleObjects that is going to have 2 handles: the pipeHandle and the cacelEvent handle.
+                The only reason why this code deals with the extra trouble of asynchronous IO is to be able to set the 
+                stopListeningEvent and abort the server listening process.
+                A synchronous server has the issue of getting locked in a ConnectToNamedPipe or in a ReadFile. Once it is
+                locked, the thread cannot be stopped and the exe hangs arround.
+                Previous synchronous alternatives that caused problems where:
+                   1) Set a flag and use the client to connect and send data through the pipe so that the server gets out
+                   of its synchronous calls. This fails when we have more than one instance since the pipe has the same name
+                   and another instance might get the client message.
+                   2) Set a flag and then use the CancelSynchronousIO API. This worked fine, but this API is not available
+                   in XP and CancelIO, which is available in XP did not work.
+                Using unmanaged API's to abort the managed thread was not even tried because it sounded risky.
+                The .NET 3.5 API's with the same asynchronous logic used here (waiting on 2 events) also worked fine
+                in tests and produced simpler code.
+                .NET 3.5 was not used in the exe because it is supposed to check for .NET presence. We did not move
+                the client and server to the DLL because it would take the same startup time (mostly depending on
+                DLL loading) to start up a client. Moving just the server side to the DLL would have worked, but
+                having half the solution in interop and half in .NET is not ideal.
+            Alternatives to consider in the future:
+                - One name per server can allow more predictability on what server receives the client messages
+                (there is none right now)  but the cleaning up of the files not propperly deleted by their ow
+                n servers might requiring sending a message to each pipe instead of the current one messag
+                e to the current pipe we send in the beginning to reset the pipe name reference count.
+                .NET 3.5 SP1 has NamedPipe API's that might simplify some of this code and make the asynchronous pipe easier to write,
+                but most of the complexity here dealing with the files that publish pipe names, will still remain.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.BufferSize">
+            <summary>
+            The size of the Server read buffer.
+            .NET API's should be limited to MAX_PATH Even if file names we are passing through the pipe
+            are larger than 512 unicode characters, multiple reads are performed in the server and multiple
+            writes happen automatically on the client.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.Tracer">
+            <summary>
+            tracer for both server and client named pipe functionality.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.logonSid">
+            <summary>
+            Caches the retrieved logon sid
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.useTestName">
+            <summary>
+            value indicating the server/client should use a test pipe name
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.startListeningThread">
+            <summary>
+            Thread used in StartListening
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.stopListeningEvent">
+            <summary>
+            The event used to cancel the listening on the server
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.openMethod">
+            <summary>
+            Method to be called to open a file
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.pipeHandle">
+            <summary>
+            Handle to the pipe initilized after a succesfull call to CreateNamedPipe
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.pipeNameFile">
+            <summary>
+            Pointer to the file used to publish the pipe name.
+            We keep this so we can delete the file.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.pipeEvent">
+            <summary>
+            The event used in the overlapped structure to signal events on the pipe.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.testServerPauseEvent">
+            <summary>
+            Event allowing tests to pause the listening stages of the server.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.testPauseEvent">
+            <summary>
+            Event allowing tests to pause untill the server is about to wait on testServerPauseEvent
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.testResultCallback">
+            <summary>
+            Callback called to communicate each result of the listening stage to test.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            Initializes a new instance of the NamedPipeServer class
+            </summary>
+            <param name="openMethod">Method to be called to open files</param>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetLogonSidPath">
+            <summary>
+            Gets the array with the path up to the logon sid.
+            </summary>
+            <returns>the array with the path up to the logon sid.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetPipeNameStart">
+            <summary>
+            Gets the beginning of the pipe namethat does not include a guid
+            </summary>
+            <returns>he beginning of the pipe namethat does not include a guid</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetApplicationDataPath(System.String[])">
+            <summary>
+            Gets the DirectoryInfo corresponding to path starting at application data or null if it does not exist
+            </summary>
+            <param name="path">path to be retrieved</param>
+            <returns>The DirectoryInfo corresponding to path starting at application data or null if it does not exist.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetFirstFileInfoStartingWith(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Searches for a FileInfo starting with <paramref name="str"/> in <paramref name="parent"/>.
+            </summary>
+            <param name="parent">Directory to search for</param>
+            <param name="str">start of file name to serach for</param>
+            <returns>A FileInfo starting with <paramref name="str"/> in <paramref name="parent"/> or null if not present.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.StopListening">
+            <summary>
+            A stopListening flag is used and checked in the server loop when we want to abort the server thread.
+            Since the server might be stopped into a synchronous IO call we interrupt that call with the unmanaged API
+            CancelSynchronousIo.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreateNamedPipe(System.Boolean)">
+            <summary>
+            Calls CreateNamedPipe to start the server
+            </summary>
+            <param name="resetReferenceCount">
+            true if no previous server was detected so we can restart the reference count
+            </param>
+            <returns>true if it succeded in the pipe creation</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.StartListening">
+            <summary>
+            Starts a thread that will run the server loop.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryCreateText(System.IO.FileInfo,System.IO.StreamWriter@)">
+            <summary>
+            Calls file.CreateText returning false if an exception is thrown.
+            </summary>
+            <param name="file">file to call CreateText on</param>
+            <param name="stream">return value from CreateText</param>
+            <returns>false if an exception is thrown calling CreateText</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryOpenText(System.IO.FileInfo,System.IO.StreamReader@)">
+            <summary>
+            Calls file.OpenText returning false if an exception is thrown.
+            </summary>
+            <param name="file">file to call OpenText on</param>
+            <param name="stream">return value from OpenText</param>
+            <returns>false if an exception is thrown calling OpenText</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryGetPipeNameReferenceCount(System.IO.FileInfo,System.Int32@)">
+            <summary>
+            Tries to get the current reference count value from file
+            </summary>
+            <param name="file">file we want to get the reference count from.</param>
+            <param name="value">returned refernece count</param>
+            <returns>true if succeded getting the reference count</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TrySetPipeNameReferenceCount(System.IO.FileInfo,System.Int32)">
+            <summary>
+            Tries to set the current reference count value in file.
+            </summary>
+            <param name="file">file we want to set the reference count.</param>
+            <param name="value">refernece count</param>
+            <returns>true if succeded setting the reference count</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetLogonSid">
+            <summary>
+            Retrieves the logon sid used to secure the named pipe.
+            </summary>
+            <returns>The logon sid used to secure the named pipe</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreateDirectoryInfo(System.String)">
+            <summary>
+            Calls the DirectoryInfo constructor returning null if an exception was thrown.
+            The directory is not garanteed to be created on the return of this function.
+            </summary>
+            <param name="fullPath">Path to the directory to be created</param>
+            <returns>A DirectoryInfo corresponding to <paramref name="fullPath"/> or null if an exception was thrown</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreateChildPathIfNecessary(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Based on an esisting <paramref name="parent"/> creates a child directory corresponding to <paramref name="childPath"/>
+            if it doesn't already exists.
+            </summary>
+            <param name="parent">existing parent directory</param>
+            <param name="childPath">child path to be created</param>
+            <returns>The created child directory.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreateApplicationDataPath(System.String[])">
+            <summary>
+            Creates all elements in path starting at application data.
+            </summary>
+            <param name="path">path to be created</param>
+            <returns>The childmost Directory info or null if it could not be created.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreatePipeNameIfNecessary">
+            <summary>
+            Called by the server to Create a pipe name if necesssary.
+            </summary>
+            <returns>The file used to publish the pipe name pipe name, or null if it could not be created.</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.IsAdmin">
+            <summary>
+            Returns true if we are running as administrator
+            </summary>
+            <returns>true if we are running as administrator</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.CreateSecurityDescriptor(System.Security.Principal.SecurityIdentifier)">
+            <summary>
+            Returns a security descriptor allowing the sid full control
+            </summary>
+            <param name="sid">sid to be allowd full control</param>
+            <returns>a security descriptor allowing the sid full control</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.GetSessionSecurityAttributes(System.Runtime.InteropServices.GCHandle)">
+            <summary>
+            Gets security attributes with the security descriptor.
+            </summary>
+            <param name="securityDescriptor">Security Descriptor</param>
+            <returns>security attributes with the security descriptor</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryDeleteFile(System.IO.FileInfo)">
+            <summary>
+            Deletes a file returning true if it could be deleted
+            </summary>
+            <param name="file">file to be deleted</param>
+            <returns>true if it could be deleted</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryDeleteDirectory(System.IO.DirectoryInfo)">
+            <summary>
+            Deletes directory returning true if it could be deleted
+            </summary>
+            <param name="directory">directory to be deleted</param>
+            <returns>true if it could be deleted</returns>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.StartListeningThreadStart">
+            <summary>
+            Starts the loop listening to clients.
+            This is aborted when this.StopListening() is called.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestCallback(Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults)">
+            <summary>
+            Calls the testResultCallBack, if it is present.
+            </summary>
+            <param name="result">result to be passed to the callback</param>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestPause">
+            <summary>
+            Informs tests it is about to wait on testServerPauseEvent by setting testPauseEvent and
+            waits on this.testServerPauseEvent, if both events are present.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.InvokeOpenMethod(System.Text.StringBuilder,System.String)">
+            <summary>
+            Called when the final string reaches the server to call this.openMethod
+            </summary>
+            <param name="stringSoFar">string accumulated so far</param>
+            <param name="finalString">final string segment</param>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryDecrementCountOrDeletePipeNameFile">
+            <summary>
+            Decrements the count of servers listening to the named pipe and deletes the file that publishes
+            the named pipe name if this is the last server
+            </summary>
+        </member>
+        <member name="M:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TryDeletePipeNameFile">
+            <summary>
+            tries to delete this.pipeNameFile and its parent folder if no more servers are still up advertising that file name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.LogonSid">
+            <summary>
+            Gets the cached logon sid
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.UseTestName">
+            <summary>
+            Gets or sets a value indicating whether the server/client should use a test pipe name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestServerPauseEvent">
+            <summary>
+            Gets or sets an event allowing tests to pause the listening stages of the server.
+            This should be set before calling StartListening.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestPauseEvent">
+            <summary>
+            Gets or sets an event allowing tests to pause untill the server is about to wait on testServerPauseEvent.
+            This should be set before calling StartListening.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResultCallback">
+            <summary>
+            Gets or sets a callback called to communicate each result of the listening stage to test.
+            This should be set before calling StartListening.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults">
+            <summary>
+            Results to be communicated to test
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionPending">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.CancelConnection">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionResultFailedBeforeWait">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionResultFailedAfterWait">
+            <summary> 
+            This is one of 2 test values that cannot yet be tested since if the server 
+            is waiting and the client does the first thing it can withy the pipe, which is a CreateFile, 
+            the connection will succede.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionSuccededWithErrorConnected">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionSuccededAfterWait">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionReadyToGetResult">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ConnectionResultSuccesfull">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ReadResultSuccessfull">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.CancelRead">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ReadOverlappedResultSuccessfull">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ReadMoreData">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ReadFailureWaiting">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.ReadFailureNoWaiting">
+            <summary> test value </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.DisconnectionFailure">
+            <summary> 
+            This is also untested. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NamedPipeServer.TestResults.DisconnectionSuccess">
+            <summary> test value </summary>
+        </member>
+        <member name="T:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings">
+            <summary>
+            Contains all the strings that should not be localized.
+            The comments in each field are the justification for the strings not to be localized
+            </summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.PipeNoOp">
+            <summary>String that is ignored when received by the pipe server.</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.PipeName">
+            <summary>Literally: PowerShellISEPipeName</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.PipeThreadName">
+            <summary>PowerShell ISE NamedPipe Server</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.PipeNamePrefix">
+            <summary>Literally: \\.\pipe\</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.Microsoft">
+            <summary>Literally: Microsoft</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.PowerShell">
+            <summary>Literally: PowerShell</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.ISE">
+            <summary>Literally: ISE</summary>
+        </member>
+        <member name="F:Microsoft.Windows.PowerShell.GuiExe.Internal.NLCommonStrings.Windows">
+            <summary>Literally: Windows</summary>
+        </member>
+    </members>
+</doc>

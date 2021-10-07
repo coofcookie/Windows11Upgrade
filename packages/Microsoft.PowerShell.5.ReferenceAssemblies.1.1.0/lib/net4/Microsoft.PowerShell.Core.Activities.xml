@@ -1,0 +1,2100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.Core.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Disable-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.DisablePSSessionConfiguration.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.EnablePSRemoting">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Enable-PSRemoting command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.EnablePSRemoting.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.EnablePSRemoting.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSRemoting.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSRemoting.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSRemoting.SkipNetworkProfileCheck">
+            <summary>
+            Provides access to the SkipNetworkProfileCheck parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.DisablePSRemoting">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Disable-PSRemoting command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.DisablePSRemoting.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.DisablePSRemoting.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.DisablePSRemoting.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.DisablePSRemoting.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Enable-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.SecurityDescriptorSddl">
+            <summary>
+            Provides access to the SecurityDescriptorSddl parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.EnablePSSessionConfiguration.SkipNetworkProfileCheck">
+            <summary>
+            Provides access to the SkipNetworkProfileCheck parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.ForEachObject">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\ForEach-Object command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ForEachObject.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ForEachObject.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.Begin">
+            <summary>
+            Provides access to the Begin parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.Process">
+            <summary>
+            Provides access to the Process parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.End">
+            <summary>
+            Provides access to the End parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.RemainingScripts">
+            <summary>
+            Provides access to the RemainingScripts parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.MemberName">
+            <summary>
+            Provides access to the MemberName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ForEachObject.ArgumentList">
+            <summary>
+            Provides access to the ArgumentList parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetCommand">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-Command command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetCommand.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetCommand.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.Verb">
+            <summary>
+            Provides access to the Verb parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.Noun">
+            <summary>
+            Provides access to the Noun parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.Module">
+            <summary>
+            Provides access to the Module parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.CommandType">
+            <summary>
+            Provides access to the CommandType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.TotalCount">
+            <summary>
+            Provides access to the TotalCount parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.Syntax">
+            <summary>
+            Provides access to the Syntax parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.ArgumentList">
+            <summary>
+            Provides access to the ArgumentList parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.All">
+            <summary>
+            Provides access to the All parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.ListImported">
+            <summary>
+            Provides access to the ListImported parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.ParameterName">
+            <summary>
+            Provides access to the ParameterName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetCommand.ParameterType">
+            <summary>
+            Provides access to the ParameterType parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetHelp">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-Help command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetHelp.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetHelp.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Category">
+            <summary>
+            Provides access to the Category parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Component">
+            <summary>
+            Provides access to the Component parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Functionality">
+            <summary>
+            Provides access to the Functionality parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Role">
+            <summary>
+            Provides access to the Role parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Detailed">
+            <summary>
+            Provides access to the Detailed parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Full">
+            <summary>
+            Provides access to the Full parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Examples">
+            <summary>
+            Provides access to the Examples parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Parameter">
+            <summary>
+            Provides access to the Parameter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.Online">
+            <summary>
+            Provides access to the Online parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetHelp.ShowWindow">
+            <summary>
+            Provides access to the ShowWindow parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.IncludeChildJob">
+            <summary>
+            Provides access to the IncludeChildJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.ChildJobState">
+            <summary>
+            Provides access to the ChildJobState parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.HasMoreData">
+            <summary>
+            Provides access to the HasMoreData parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.Before">
+            <summary>
+            Provides access to the Before parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.After">
+            <summary>
+            Provides access to the After parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.Newest">
+            <summary>
+            Provides access to the Newest parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.Command">
+            <summary>
+            Provides access to the Command parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetModule">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-Module command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetModule.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetModule.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.All">
+            <summary>
+            Provides access to the All parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.ListAvailable">
+            <summary>
+            Provides access to the ListAvailable parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.Refresh">
+            <summary>
+            Provides access to the Refresh parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.PSSession">
+            <summary>
+            Provides access to the PSSession parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.CimSession">
+            <summary>
+            Provides access to the CimSession parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.CimResourceUri">
+            <summary>
+            Provides access to the CimResourceUri parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetModule.CimNamespace">
+            <summary>
+            Provides access to the CimNamespace parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetPSSession">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-PSSession command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetPSSession.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetPSSession.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.ApplicationName">
+            <summary>
+            Provides access to the ApplicationName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.ConnectionUri">
+            <summary>
+            Provides access to the ConnectionUri parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.ConfigurationName">
+            <summary>
+            Provides access to the ConfigurationName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.AllowRedirection">
+            <summary>
+            Provides access to the AllowRedirection parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.CertificateThumbprint">
+            <summary>
+            Provides access to the CertificateThumbprint parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.Port">
+            <summary>
+            Provides access to the Port parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.UseSSL">
+            <summary>
+            Provides access to the UseSSL parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.SessionOption">
+            <summary>
+            Provides access to the SessionOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSession.PSSessionId">
+            <summary>
+            Provides access to the PSSessionId parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.GetPSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Get-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetPSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.GetPSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.GetPSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.NewModuleManifest">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\New-ModuleManifest command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.NewModuleManifest.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.NewModuleManifest.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.NestedModules">
+            <summary>
+            Provides access to the NestedModules parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.Guid">
+            <summary>
+            Provides access to the Guid parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.Author">
+            <summary>
+            Provides access to the Author parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.CompanyName">
+            <summary>
+            Provides access to the CompanyName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.Copyright">
+            <summary>
+            Provides access to the Copyright parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.RootModule">
+            <summary>
+            Provides access to the RootModule parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.ModuleVersion">
+            <summary>
+            Provides access to the ModuleVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.Description">
+            <summary>
+            Provides access to the Description parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.ProcessorArchitecture">
+            <summary>
+            Provides access to the ProcessorArchitecture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PowerShellVersion">
+            <summary>
+            Provides access to the PowerShellVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.ClrVersion">
+            <summary>
+            Provides access to the ClrVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.DotNetFrameworkVersion">
+            <summary>
+            Provides access to the DotNetFrameworkVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PowerShellHostName">
+            <summary>
+            Provides access to the PowerShellHostName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PowerShellHostVersion">
+            <summary>
+            Provides access to the PowerShellHostVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.RequiredModules">
+            <summary>
+            Provides access to the RequiredModules parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.TypesToProcess">
+            <summary>
+            Provides access to the TypesToProcess parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.FormatsToProcess">
+            <summary>
+            Provides access to the FormatsToProcess parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.ScriptsToProcess">
+            <summary>
+            Provides access to the ScriptsToProcess parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.RequiredAssemblies">
+            <summary>
+            Provides access to the RequiredAssemblies parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.FileList">
+            <summary>
+            Provides access to the FileList parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.ModuleList">
+            <summary>
+            Provides access to the ModuleList parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.FunctionsToExport">
+            <summary>
+            Provides access to the FunctionsToExport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.AliasesToExport">
+            <summary>
+            Provides access to the AliasesToExport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.VariablesToExport">
+            <summary>
+            Provides access to the VariablesToExport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.CmdletsToExport">
+            <summary>
+            Provides access to the CmdletsToExport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PrivateData">
+            <summary>
+            Provides access to the PrivateData parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.HelpInfoUri">
+            <summary>
+            Provides access to the HelpInfoUri parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewModuleManifest.DefaultCommandPrefix">
+            <summary>
+            Provides access to the DefaultCommandPrefix parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.TestPSSessionConfigurationFile">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Test-PSSessionConfigurationFile command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.TestPSSessionConfigurationFile.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.TestPSSessionConfigurationFile.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.TestPSSessionConfigurationFile.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.TestPSSessionConfigurationFile.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.ReceiveJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Receive-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ReceiveJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ReceiveJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Location">
+            <summary>
+            Provides access to the Location parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Session">
+            <summary>
+            Provides access to the Session parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Keep">
+            <summary>
+            Provides access to the Keep parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.NoRecurse">
+            <summary>
+            Provides access to the NoRecurse parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.AutoRemoveJob">
+            <summary>
+            Provides access to the AutoRemoveJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.WriteEvents">
+            <summary>
+            Provides access to the WriteEvents parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.WriteJobInResults">
+            <summary>
+            Provides access to the WriteJobInResults parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ReceiveJob.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Register-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ProcessorArchitecture">
+            <summary>
+            Provides access to the ProcessorArchitecture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.SessionType">
+            <summary>
+            Provides access to the SessionType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.AssemblyName">
+            <summary>
+            Provides access to the AssemblyName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ApplicationBase">
+            <summary>
+            Provides access to the ApplicationBase parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ConfigurationTypeName">
+            <summary>
+            Provides access to the ConfigurationTypeName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.RunAsCredential">
+            <summary>
+            Provides access to the RunAsCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ThreadApartmentState">
+            <summary>
+            Provides access to the ThreadApartmentState parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ThreadOptions">
+            <summary>
+            Provides access to the ThreadOptions parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.AccessMode">
+            <summary>
+            Provides access to the AccessMode parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.UseSharedProcess">
+            <summary>
+            Provides access to the UseSharedProcess parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.StartupScript">
+            <summary>
+            Provides access to the StartupScript parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.MaximumReceivedDataSizePerCommandMB">
+            <summary>
+            Provides access to the MaximumReceivedDataSizePerCommandMB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.MaximumReceivedObjectSizeMB">
+            <summary>
+            Provides access to the MaximumReceivedObjectSizeMB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.SecurityDescriptorSddl">
+            <summary>
+            Provides access to the SecurityDescriptorSddl parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ShowSecurityDescriptorUI">
+            <summary>
+            Provides access to the ShowSecurityDescriptorUI parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.NoServiceRestart">
+            <summary>
+            Provides access to the NoServiceRestart parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.PSVersion">
+            <summary>
+            Provides access to the PSVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.SessionTypeOption">
+            <summary>
+            Provides access to the SessionTypeOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.TransportOption">
+            <summary>
+            Provides access to the TransportOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.ModulesToImport">
+            <summary>
+            Provides access to the ModulesToImport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RegisterPSSessionConfiguration.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.NewPSTransportOption">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\New-PSTransportOption command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxIdleTimeoutSec">
+            <summary>
+            Provides access to the MaxIdleTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.ProcessIdleTimeoutSec">
+            <summary>
+            Provides access to the ProcessIdleTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxSessions">
+            <summary>
+            Provides access to the MaxSessions parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxConcurrentCommandsPerSession">
+            <summary>
+            Provides access to the MaxConcurrentCommandsPerSession parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxSessionsPerUser">
+            <summary>
+            Provides access to the MaxSessionsPerUser parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxMemoryPerSessionMB">
+            <summary>
+            Provides access to the MaxMemoryPerSessionMB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxProcessesPerSession">
+            <summary>
+            Provides access to the MaxProcessesPerSession parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.MaxConcurrentUsers">
+            <summary>
+            Provides access to the MaxConcurrentUsers parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.IdleTimeoutSec">
+            <summary>
+            Provides access to the IdleTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.NewPSTransportOption.OutputBufferingMode">
+            <summary>
+            Provides access to the OutputBufferingMode parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.RemoveJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Remove-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RemoveJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RemoveJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.Command">
+            <summary>
+            Provides access to the Command parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemoveJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.RemovePSSession">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Remove-PSSession command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RemovePSSession.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.RemovePSSession.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.Session">
+            <summary>
+            Provides access to the Session parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.PSSessionId">
+            <summary>
+            Provides access to the PSSessionId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.RemovePSSession.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Set-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.AssemblyName">
+            <summary>
+            Provides access to the AssemblyName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ApplicationBase">
+            <summary>
+            Provides access to the ApplicationBase parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ConfigurationTypeName">
+            <summary>
+            Provides access to the ConfigurationTypeName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.RunAsCredential">
+            <summary>
+            Provides access to the RunAsCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ThreadApartmentState">
+            <summary>
+            Provides access to the ThreadApartmentState parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ThreadOptions">
+            <summary>
+            Provides access to the ThreadOptions parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.AccessMode">
+            <summary>
+            Provides access to the AccessMode parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.UseSharedProcess">
+            <summary>
+            Provides access to the UseSharedProcess parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.StartupScript">
+            <summary>
+            Provides access to the StartupScript parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.MaximumReceivedDataSizePerCommandMB">
+            <summary>
+            Provides access to the MaximumReceivedDataSizePerCommandMB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.MaximumReceivedObjectSizeMB">
+            <summary>
+            Provides access to the MaximumReceivedObjectSizeMB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.SecurityDescriptorSddl">
+            <summary>
+            Provides access to the SecurityDescriptorSddl parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ShowSecurityDescriptorUI">
+            <summary>
+            Provides access to the ShowSecurityDescriptorUI parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.NoServiceRestart">
+            <summary>
+            Provides access to the NoServiceRestart parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.PSVersion">
+            <summary>
+            Provides access to the PSVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.SessionTypeOption">
+            <summary>
+            Provides access to the SessionTypeOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.TransportOption">
+            <summary>
+            Provides access to the TransportOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.ModulesToImport">
+            <summary>
+            Provides access to the ModulesToImport parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SetPSSessionConfiguration.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.StartJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Start-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.StartJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.StartJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.DefinitionName">
+            <summary>
+            Provides access to the DefinitionName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.DefinitionPath">
+            <summary>
+            Provides access to the DefinitionPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.Type">
+            <summary>
+            Provides access to the Type parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.ScriptBlock">
+            <summary>
+            Provides access to the ScriptBlock parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.FilePath">
+            <summary>
+            Provides access to the FilePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.InitializationScript">
+            <summary>
+            Provides access to the InitializationScript parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.RunAs32">
+            <summary>
+            Provides access to the RunAs32 parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.PSVersion">
+            <summary>
+            Provides access to the PSVersion parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StartJob.ArgumentList">
+            <summary>
+            Provides access to the ArgumentList parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.StopJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Stop-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.StopJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.StopJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.StopJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.TestModuleManifest">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Test-ModuleManifest command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.TestModuleManifest.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.TestModuleManifest.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.TestModuleManifest.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.TestModuleManifest.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Unregister-PSSessionConfiguration command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UnregisterPSSessionConfiguration.NoServiceRestart">
+            <summary>
+            Provides access to the NoServiceRestart parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.UpdateHelp">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Update-Help command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.UpdateHelp.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.UpdateHelp.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.Module">
+            <summary>
+            Provides access to the Module parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.SourcePath">
+            <summary>
+            Provides access to the SourcePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.Recurse">
+            <summary>
+            Provides access to the Recurse parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.UICulture">
+            <summary>
+            Provides access to the UICulture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.UseDefaultCredentials">
+            <summary>
+            Provides access to the UseDefaultCredentials parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.UpdateHelp.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.WaitJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Wait-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.WaitJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.WaitJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Any">
+            <summary>
+            Provides access to the Any parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Timeout">
+            <summary>
+            Provides access to the Timeout parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WaitJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.WhereObject">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Where-Object command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.WhereObject.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.WhereObject.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.FilterScript">
+            <summary>
+            Provides access to the FilterScript parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Property">
+            <summary>
+            Provides access to the Property parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.EQ">
+            <summary>
+            Provides access to the EQ parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CEQ">
+            <summary>
+            Provides access to the CEQ parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.NE">
+            <summary>
+            Provides access to the NE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CNE">
+            <summary>
+            Provides access to the CNE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.GT">
+            <summary>
+            Provides access to the GT parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CGT">
+            <summary>
+            Provides access to the CGT parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.LT">
+            <summary>
+            Provides access to the LT parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CLT">
+            <summary>
+            Provides access to the CLT parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.GE">
+            <summary>
+            Provides access to the GE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CGE">
+            <summary>
+            Provides access to the CGE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.LE">
+            <summary>
+            Provides access to the LE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CLE">
+            <summary>
+            Provides access to the CLE parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Like">
+            <summary>
+            Provides access to the Like parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CLike">
+            <summary>
+            Provides access to the CLike parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.NotLike">
+            <summary>
+            Provides access to the NotLike parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CNotLike">
+            <summary>
+            Provides access to the CNotLike parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Match">
+            <summary>
+            Provides access to the Match parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CMatch">
+            <summary>
+            Provides access to the CMatch parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.NotMatch">
+            <summary>
+            Provides access to the NotMatch parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CNotMatch">
+            <summary>
+            Provides access to the CNotMatch parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Contains">
+            <summary>
+            Provides access to the Contains parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CContains">
+            <summary>
+            Provides access to the CContains parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.NotContains">
+            <summary>
+            Provides access to the NotContains parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CNotContains">
+            <summary>
+            Provides access to the CNotContains parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.In">
+            <summary>
+            Provides access to the In parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CIn">
+            <summary>
+            Provides access to the CIn parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.NotIn">
+            <summary>
+            Provides access to the NotIn parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.CNotIn">
+            <summary>
+            Provides access to the CNotIn parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.Is">
+            <summary>
+            Provides access to the Is parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.WhereObject.IsNot">
+            <summary>
+            Provides access to the IsNot parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.SaveHelp">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Save-Help command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SaveHelp.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SaveHelp.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.DestinationPath">
+            <summary>
+            Provides access to the DestinationPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.Module">
+            <summary>
+            Provides access to the Module parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.UICulture">
+            <summary>
+            Provides access to the UICulture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.UseDefaultCredentials">
+            <summary>
+            Provides access to the UseDefaultCredentials parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SaveHelp.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.SuspendJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Suspend-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SuspendJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.SuspendJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.SuspendJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Core.Activities.ResumeJob">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Core\Resume-Job command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ResumeJob.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Core.Activities.ResumeJob.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.Job">
+            <summary>
+            Provides access to the Job parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.JobId">
+            <summary>
+            Provides access to the JobId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.State">
+            <summary>
+            Provides access to the State parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Core.Activities.ResumeJob.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

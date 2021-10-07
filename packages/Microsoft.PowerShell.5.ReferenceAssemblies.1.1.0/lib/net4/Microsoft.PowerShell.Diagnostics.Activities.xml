@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.Diagnostics.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Diagnostics\Export-Counter command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.FileFormat">
+            <summary>
+            Provides access to the FileFormat parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.MaxSize">
+            <summary>
+            Provides access to the MaxSize parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ExportCounter.Circular">
+            <summary>
+            Provides access to the Circular parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Diagnostics.Activities.GetCounter">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Diagnostics\Get-Counter command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.ListSet">
+            <summary>
+            Provides access to the ListSet parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.Counter">
+            <summary>
+            Provides access to the Counter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.SampleInterval">
+            <summary>
+            Provides access to the SampleInterval parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.MaxSamples">
+            <summary>
+            Provides access to the MaxSamples parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.Continuous">
+            <summary>
+            Provides access to the Continuous parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetCounter.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Diagnostics\Get-WinEvent command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.ListLog">
+            <summary>
+            Provides access to the ListLog parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.ListProvider">
+            <summary>
+            Provides access to the ListProvider parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.ProviderName">
+            <summary>
+            Provides access to the ProviderName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.MaxEvents">
+            <summary>
+            Provides access to the MaxEvents parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.FilterXPath">
+            <summary>
+            Provides access to the FilterXPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.FilterXml">
+            <summary>
+            Provides access to the FilterXml parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.FilterHashtable">
+            <summary>
+            Provides access to the FilterHashtable parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.Oldest">
+            <summary>
+            Provides access to the Oldest parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.GetWinEvent.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Diagnostics\New-WinEvent command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.ProviderName">
+            <summary>
+            Provides access to the ProviderName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.WinEventId">
+            <summary>
+            Provides access to the WinEventId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.Version">
+            <summary>
+            Provides access to the Version parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.NewWinEvent.Payload">
+            <summary>
+            Provides access to the Payload parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Diagnostics\Import-Counter command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.ListSet">
+            <summary>
+            Provides access to the ListSet parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.StartTime">
+            <summary>
+            Provides access to the StartTime parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.EndTime">
+            <summary>
+            Provides access to the EndTime parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.Counter">
+            <summary>
+            Provides access to the Counter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.Summary">
+            <summary>
+            Provides access to the Summary parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Diagnostics.Activities.ImportCounter.MaxSamples">
+            <summary>
+            Provides access to the MaxSamples parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

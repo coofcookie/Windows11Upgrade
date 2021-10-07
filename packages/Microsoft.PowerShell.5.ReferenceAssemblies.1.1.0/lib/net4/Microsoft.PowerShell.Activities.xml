@@ -1,0 +1,2879 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.Activities.GetWmiObject">
+            <summary>
+            Workflow activity wrapping the Get-Wmiobject cmdlet
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetWmiObject.#ctor">
+            <summary>
+            Sets the default display name of the activity
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetWmiObject.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Execute the logic for the activity
+            </summary>
+            <param name="context">The native activity context to use in this activity</param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.Class">
+            <summary>
+            Specifies the name of a WMI class. When this parameter is used, the cmdlet
+            retrieves instances of the WMI class.
+            </summary>summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.Property">
+            <summary>
+            Specifies the WMI class property or set of properties to retrieve.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.Filter">
+            <summary>
+            Specifies a Where clause to use as a filter. Uses the syntax of the WMI Query Language (WQL).
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.Query">
+            <summary>
+             Specifies a WMI Query Language (WQL) statement to run. Event queries are not supported by this parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.Amended">
+            <summary>
+            Indicates whether the objects that are returned from WMI should contain amended
+            information. Typically, amended information is localizable information, such as object
+            and property descriptions, that is attached to the WMI object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetWmiObject.DirectRead">
+             <summary>
+             Specifies whether direct access to the WMI provider is requested for the specified
+             class without any regard to its base class or to its derived classes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.InvokeWmiMethod">
+            <summary>
+            Wraps the Invoke-WmiMethod cmdlet
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InvokeWmiMethod.#ctor">
+            <summary>
+            Sets the default display name of the activity
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InvokeWmiMethod.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Implements the logic of this activity
+            </summary>
+            <param name="context">The activity context to refer to</param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeWmiMethod.Path">
+            <summary>
+            A WMI path specification which should be of the form "Win32_Printer.DeviceID='TestPrinter'"
+            this will select instances of objects on which to call the method.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeWmiMethod.Class">
+            <summary>
+            The name of the WMI class to use for when static methods.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeWmiMethod.Name">
+            <summary>
+            THe name of the instance or static method to call
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeWmiMethod.ArgumentList">
+            <summary>
+            The collection of arguments to use when calling the method
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.GetCimAssociatedInstance">
+            <summary>
+            Activity to invoke the CimCmdlets\Get-CimAssociatedInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.Association">
+            <summary>
+            Provides access to the Association parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.ResultClassName">
+            <summary>
+            Provides access to the ResultClassName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.KeyOnly">
+            <summary>
+            Provides access to the KeyOnly parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimAssociatedInstance.PSDefiningModule">
+            <summary>
+            No module needed for this activity
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.GetCimClass">
+            <summary>
+            Activity to invoke the CimCmdlets\Get-CimClass command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimClass.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimClass.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.ClassName">
+            <summary>
+            Provides access to the ClassName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.MethodName">
+            <summary>
+            Provides access to the MethodName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.PropertyName">
+            <summary>
+            Provides access to the PropertyName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.QualifierName">
+            <summary>
+            Provides access to the QualifierName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimClass.PSDefiningModule">
+            <summary>
+            No module needed for this activity
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.GetCimInstance">
+            <summary>
+            Activity to invoke the CimCmdlets\Get-CimInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetCimInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.ClassName">
+            <summary>
+            Provides access to the ClassName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.KeyOnly">
+            <summary>
+            Provides access to the KeyOnly parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.Query">
+            <summary>
+            Provides access to the Query parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.QueryDialect">
+            <summary>
+            Provides access to the QueryDialect parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.Shallow">
+            <summary>
+            Provides access to the Shallow parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetCimInstance.Property">
+            <summary>
+            Provides access to the Property parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.InvokeCimMethod">
+            <summary>
+            Activity to invoke the CimCmdlets\Invoke-CimMethod command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InvokeCimMethod.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InvokeCimMethod.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.ClassName">
+            <summary>
+            Provides access to the ClassName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.CimClass">
+            <summary>
+            Provides access to the CimClass parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.Query">
+            <summary>
+            Provides access to the Query parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.QueryDialect">
+            <summary>
+            Provides access to the QueryDialect parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.Arguments">
+            <summary>
+            Provides access to the Arguments parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.MethodName">
+            <summary>
+            Provides access to the MethodName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InvokeCimMethod.PSDefiningModule">
+            <summary>
+            Script module contents for this activity
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.NewCimInstance">
+            <summary>
+            Activity to invoke the CimCmdlets\New-CimInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.ClassName">
+            <summary>
+            Provides access to the ClassName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.Key">
+            <summary>
+            Provides access to the Key parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.CimClass">
+            <summary>
+            Provides access to the CimClass parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.Property">
+            <summary>
+            Provides access to the Property parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.ClientOnly">
+            <summary>
+            Provides access to the ClientOnly parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimInstance.PSDefiningModule">
+            <summary>
+            Script module contents for this activity`n/// </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.NewCimSession">
+            <summary>
+            Activity to invoke the CimCmdlets\New-CimSession command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimSession.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimSession.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.CertificateThumbprint">
+            <summary>
+            Provides access to the CertificateThumbprint parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.Port">
+            <summary>
+            Provides access to the Port parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.SessionOption">
+            <summary>
+            Provides access to the SessionOption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSession.PSDefiningModule">
+            <summary>
+            Script module contents for this activity`n/// </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.NewCimSessionOption">
+            <summary>
+            Activity to invoke the CimCmdlets\New-CimSessionOption command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimSessionOption.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.NewCimSessionOption.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.NoEncryption">
+            <summary>
+            Provides access to the NoEncryption parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.CertificateCACheck">
+            <summary>
+            Provides access to the CertificateCACheck parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.CertificateCNCheck">
+            <summary>
+            Provides access to the CertificateCNCheck parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.CertRevocationCheck">
+            <summary>
+            Provides access to the CertRevocationCheck parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.EncodePortInServicePrincipalName">
+            <summary>
+            Provides access to the EncodePortInServicePrincipalName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.Encoding">
+            <summary>
+            Provides access to the Encoding parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.HttpPrefix">
+            <summary>
+            Provides access to the HttpPrefix parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.MaxEnvelopeSizeKB">
+            <summary>
+            Provides access to the MaxEnvelopeSizeKB parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.ProxyAuthentication">
+            <summary>
+            Provides access to the ProxyAuthentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.ProxyCertificateThumbprint">
+            <summary>
+            Provides access to the ProxyCertificateThumbprint parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.ProxyCredential">
+            <summary>
+            Provides access to the ProxyCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.ProxyType">
+            <summary>
+            Provides access to the ProxyType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.UseSsl">
+            <summary>
+            Provides access to the UseSsl parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.PacketIntegrity">
+            <summary>
+            Provides access to the PacketIntegrity parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.PacketPrivacy">
+            <summary>
+            Provides access to the PacketPrivacy parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.Protocol">
+            <summary>
+            Provides access to the Protocol parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.UICulture">
+            <summary>
+            Provides access to the UICulture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.Culture">
+            <summary>
+            Provides access to the Culture parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.NewCimSessionOption.PSDefiningModule">
+            <summary>
+            Script module contents for this activity`n/// </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.RemoveCimInstance">
+            <summary>
+            Activity to invoke the CimCmdlets\Remove-CimInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.RemoveCimInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.RemoveCimInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.Query">
+            <summary>
+            Provides access to the Query parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.QueryDialect">
+            <summary>
+            Provides access to the QueryDialect parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.RemoveCimInstance.PSDefiningModule">
+            <summary>
+            Script module contents for this activity`n/// </summary>
+        </member>
+        <member name="T:cimcmdlets.Activities.SetCimInstance">
+            <summary>
+            Activity to invoke the CimCmdlets\Set-CimInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:cimcmdlets.Activities.SetCimInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:cimcmdlets.Activities.SetCimInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.TypeImplementingCmdlet">
+            <summary>
+            The .NET type implementing the cmdlet to invoke.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.OperationTimeoutSec">
+            <summary>
+            Provides access to the OperationTimeoutSec parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.Query">
+            <summary>
+            Provides access to the Query parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.QueryDialect">
+            <summary>
+            Provides access to the QueryDialect parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.Property">
+            <summary>
+            Provides access to the Property parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:cimcmdlets.Activities.SetCimInstance.PSDefiningModule">
+            <summary>
+            Module defining this command
+            Script module contents for this activity
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.Internal.IsArgumentSet">
+            <summary>
+            Determines whether an argument to a PSActivity activity
+            has been set.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Internal.IsArgumentSet.Execute(System.Activities.CodeActivityContext)">
+            <summary>
+            Invokes the activity
+            </summary>
+            <param name="context">The activity context.</param>
+            <returns>True if the given argument is set.</returns>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.Internal.IsArgumentSet.Argument">
+            <summary>
+            The argument to investigate.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.InlineScript">
+            <summary>
+            Activity to support the invocation of PowerShell script content in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.CacheMetadata(System.Activities.NativeActivityMetadata)">
+            <summary>
+            Validates the contents of the script block for this command.
+            </summary>
+            <param name="metadata">Metatdata for this activity</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the script to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.IsBlocked(System.String)">
+            <summary>
+            Checks if the script is blocked
+            </summary>
+            <param name="script"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.RemoveUsingPrefix(System.String,System.Collections.Generic.HashSet{System.String}@)">
+            <summary>
+            Remove the "Using" prefix for all UsingExpressionAsts that appear in the given script
+            </summary>
+            <param name="script">script text</param>
+            <param name="usingVariables">names of the variables in the script that have the "Using" prefix</param>
+            <returns>
+            Return <para>script</para> if the script text is empty string or null
+            Return <para>script</para> if there are errors when parsing the script text
+            Return <para>script</para> if there is no UsingExpressionAst in the given script
+            Return a new script text that has all the "Using" prefixes removed
+            </returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.GetUsingExpressionAsts(System.String)">
+            <summary>
+            Get the UsingExpressionAsts out of a script
+            </summary>
+            <param name="script"></param>
+            <returns>a list of UsingExpressionAsts ordered by the StartOffset</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScript.PrepareSession(Microsoft.PowerShell.Activities.ActivityImplementationContext)">
+            <summary>
+            Adds the PSActivity variable to the active runspace, which is of type InlineScriptContext.
+            </summary>
+            <param name="implementationContext">The ActivityImplementationContext returned by the call to GetCommand.</param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScript.Command">
+            <summary>
+            The script text to invoke.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScript.CommandName">
+            <summary>
+            Name of the command to invoke
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScript.Parameters">
+            <summary>
+            Parameters to invoke the command with.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScript.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScript.UpdatePreferenceVariable">
+            <summary>
+            Indicates if preference variables need to be updated
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.InlineScriptContext">
+            <summary>
+            Defines the context information available to scripts running within the
+            InlineScript activity. These are exposed through the $PSActivity automatic
+            variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScriptContext.#ctor(Microsoft.PowerShell.Activities.InlineScript)">
+            <summary>
+            Creates a new InlineScriptContext
+            </summary>
+            <param name="current">The InlineScript activity being invoked</param>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.InlineScriptContext.current">
+            <summary>
+            Gets the current InlineScript activity being invoked.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.InlineScriptContext.Variables">
+            <summary>
+            Gets the current variables and arguments that are in-scope for
+            the current activity within its context in the workflow.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.Suspend">
+            <summary>
+            Suspends the current workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Suspend.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Invokes the activity
+            </summary>
+            <param name="context">The activity context.</param>
+            <returns>True if the given argument is set.</returns>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.Suspend.Label">
+            <summary>
+            Optional field used for resuming the worklfow for a specific label.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.Suspend.CanInduceIdle">
+            <summary>
+            Returns true if the activity can induce an idle.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.PSPersist">
+            <summary>
+            Persist the current workflow. Also defines the persistence point where suspend-job is getting suspended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PSPersist.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Invokes the activity
+            </summary>
+            <param name="context">The activity context.</param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.PSPersist.CanInduceIdle">
+            <summary>
+            Returns true if the activity can induce an idle.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSComputerName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSCredential">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSUseSsl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSConfigurationName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSApplicationName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSConnectionUri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSAllowRedirection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSSessionOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSAuthentication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSAuthenticationLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSCertificateThumbprint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.Input">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.Verbose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSConnectionRetryCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSConnectionRetryIntervalSec">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSPrivateMetadata">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSRunningTimeoutSec">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSElapsedTimeoutSec">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSWorkflowRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.JobName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.JobInstanceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.JobId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.JobCommandName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.ParentJobInstanceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.ParentJobName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.ParentJobId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.ParentCommandName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.WorkflowInstanceId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSSenderInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSCulture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSUICulture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSVersionTable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.PSPersist">
+            <summary>
+            PSPersist
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.ErrorAction">
+            <summary>
+            ErrorAction
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.WarningAction">
+            <summary>
+            WarningAction
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.Other">
+            <summary>
+            Tell the activity to look for a custom string
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.PSWorkflowRuntimeVariable.All">
+            <summary>
+            Return all values as a hashtable
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.GetPSWorkflowData`1">
+            <summary>
+            Activity to retrieve the value of a workflow runtime variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.GetPSWorkflowData`1.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Execute the logic for this activity...
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetPSWorkflowData`1.VariableToRetrieve">
+            <summary>
+            The variable to retrieve.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.GetPSWorkflowData`1.OtherVariableName">
+            <summary>
+            The variable to retrieve, if not included in the PSWorkflowRuntimeVariable enum.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.SetPSWorkflowData">
+            <summary>
+            Activity to set a host value in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.SetPSWorkflowData.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Execute the logic for this activity...
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.OtherVariableName">
+            <summary>
+            The variable to set, if not included in the PSWorkflowRuntimeVariable enum.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSRemotingBehavior">
+            <summary>
+            Defines the remoting behavior to use when invoking this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSConnectionRetryCount">
+            <summary>
+            Defines the number of retries that the activity will make to connect to a remote
+            machine when it encounters an error. The default is to not retry.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSConnectionRetryIntervalSec">
+            <summary>
+            Defines the delay, in seconds, between connection retry attempts.
+            The default is one second.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.Input">
+            <summary>
+            The Input stream for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.UseDefaultInput">
+            <summary>
+            Determines whether to connect the input stream for this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.Result">
+            <summary>
+            The output stream from the activity
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.AppendOutput">
+            <summary>
+            Determines whether to append output to Result.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSError">
+            <summary>
+            The Error stream / collection for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSProgress">
+            <summary>
+            The Progress stream / collection for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSVerbose">
+            <summary>
+            The Verbose stream / collection for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSDebug">
+            <summary>
+            The Debug stream / collection for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSWarning">
+            <summary>
+            The Warning stream / collection for the activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSComputerName">
+            <summary>
+            The computer name to invoke this activity on.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSCredential">
+            <summary>
+            Defines the credential to use in the remote connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSDisableSerialization">
+            <summary>
+            Forces the activity to return non-serialized objects. Resulting objects
+            have functional methods and properties (as opposed to serialized versions
+            of them), but will not survive persistence when the Workflow crashes or is
+            persisted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSPersist">
+            <summary>
+            Forces the activity to not call the persist functionality, which will be responsible for 
+            persisting the workflow state onto the disk.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.MergeErrorToOutput">
+            <summary>
+            Determines whether to merge error data to the output stream
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSActionRunningTimeoutSec">
+            <summary>
+            Defines the maximum amount of time, in seconds, that this activity may run.
+            The default is unlimited.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSRequiredModules">
+            <summary>
+            This the list of module names (or paths) that are required to run this Activity successfully.
+            The default is null.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSActionRetryCount">
+            <summary>
+            Defines the number of retries that the activity will make when it encounters
+            an error during execution of its action. The default is to not retry.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSActionRetryIntervalSec">
+            <summary>
+            Defines the delay, in seconds, between action retry attempts.
+            The default is one second.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSPort">
+            <summary>
+            The port to use in a remote connection attempt. The default is:
+            HTTP: 5985, HTTPS: 5986.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSUseSsl">
+            <summary>
+            Determines whether to use SSL in the connection attempt. The default is false.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSAllowRedirection">
+            <summary>
+            Determines whether to allow redirection by the remote computer. The default is false.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSApplicationName">
+            <summary>
+            Defines the remote application name to connect to. The default is "wsman".
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSConfigurationName">
+            <summary>
+            Defines the remote configuration name to connect to. The default is "Microsoft.PowerShell".
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSConnectionUri">
+            <summary>
+            Defines the fully-qualified remote URI to connect to. When specified, the PSComputerName,
+            PSApplicationName, PSConfigurationName, and PSPort are not used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSAuthentication">
+            <summary>
+            Defines the authentication type to be used in the remote connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSCertificateThumbprint">
+            <summary>
+            Defines the certificate thumbprint to be used in the remote connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.SetPSWorkflowData.PSSessionOption">
+            <summary>
+            Defines any session options to be used in the remote connection.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.InlineScriptDesigner">
+            <summary>
+            Interaction logic for InlineScriptDesigner.xaml
+            </summary>
+            <summary>
+            InlineScriptDesigner
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScriptDesigner.#ctor">
+            <summary>
+            Create the designer instance
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.InlineScriptDesigner.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.ActivityGenerator">
+            <summary>
+            Generates an activity that corresponds to a PowerShell command
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName(System.String,System.String)">
+            <summary>
+            Generate an activity for the named command.
+            </summary>
+            <param name="command">The command name to generate.</param>
+            <param name="activityNamespace">The namespace that will contain the command - for example,
+            Microsoft.PowerShell.Activities.
+            </param>
+            <returns>A string representing the C# source code of the generated activity.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromName(System.String,System.String,System.Boolean)">
+            <summary>
+            Generate an activity for the named command.
+            </summary>
+            <param name="command">The command name to generate.</param>
+            <param name="activityNamespace">The namespace that will contain the command - for example,
+            Microsoft.PowerShell.Activities.
+            </param>
+            <param name="shouldRunLocally">True if remoting-related parameters should be suppressed. This
+            should only be specified for commands that offer no value when run on a remote computer.
+            </param>
+            <returns>A string representing the C# source code of the generated activity.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo(System.Management.Automation.CommandInfo,System.String)">
+            <summary>
+            By default, the activity wrapper uses the remoting command base.
+            </summary>
+            <param name="command">The command name to generate.</param>
+            <param name="activityNamespace">The namespace that will contain the command - for example,
+            Microsoft.PowerShell.Activities.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo(System.Management.Automation.CommandInfo,System.String,System.Boolean)">
+            <summary>
+            By default, the activity wrapper uses the remoting command base.
+            </summary>
+            <param name="command">The command name to generate.</param>
+            <param name="activityNamespace">The namespace that will contain the command - for example,
+            Microsoft.PowerShell.Activities.
+            </param>
+            <param name="shouldRunLocally">True if remoting-related parameters should be suppressed. This
+            should only be specified for commands that offer no value when run on a remote computer.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromCommandInfo(System.Management.Automation.CommandInfo,System.String,System.String,System.String[],System.String,System.String)">
+            <summary>
+            Generate an activity for the given command.
+            </summary>
+            <param name="command">The command to use as the basis of the generated activity.</param>
+            <param name="activityNamespace">The namespace that will contain the command - for example,
+            Microsoft.PowerShell.Activities.
+            </param>
+            <param name="activityBaseClass">The class to use as the base class for this activity</param>
+            <param name="parametersToExclude">
+            A list of parameters on the command being wrapped that should not
+            be copied to the activity.
+            </param>
+            <param name="moduleToLoad"> The module that contains the wrapped command</param>
+            <param name="moduleDefinitionText">Addition text to inset in the class definition</param>
+            <returns>A string representing the C# source code of the generated activity.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateFromModuleInfo(System.Management.Automation.PSModuleInfo,System.String)">
+            <summary>
+            Generates a complete activity source file from a module.
+            </summary>
+            <param name="moduleToProcess"></param>
+            <param name="activityNamespace">The namesspace to use for the target classes</param>
+            <returns>An array of code elements to compile into an assembly</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.ActivityGenerator.GenerateAssemblyFromModuleInfo(System.Management.Automation.PSModuleInfo,System.String,System.String,System.String[],System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="moduleToProcess"></param>
+            <param name="activityNamespace"></param>
+            <param name="outputAssemblyPath"></param>
+            <param name="referenceAssemblies"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.PowerShellValue`1">
+            <summary>
+            Evaluate the Powershell expression and return the value of type T.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PowerShellValue`1.CacheMetadata(System.Activities.NativeActivityMetadata)">
+            <summary>
+            Validates the syntax of the script text for this activity.
+            </summary>
+            <param name="metadata">Activity metatdata for this activity</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PowerShellValue`1.ValidateExpressionConstraints(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Check to see if the expression only uses elements of the restricted language
+            as well as only using the allowed commands and variables.
+            </summary>
+            <param name="allowedCommands">
+            List of command names to allow in the expression
+            </param>
+            <param name="allowedVariables">
+            List of variable names to allow in the expression. If the collection contains a single 
+            element "*", all variables will be allowed including environment variables
+            functions, etc.
+            </param>
+            <param name="allowEnvironmentVariables">
+            If true, environment variables are allowed even if the allowedVariables list is empty.
+            </param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PowerShellValue`1.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Execution of PowerShell value activity.
+            PowerShell expression will be evaluated using PowerShell runspace and the value of Type T will be returned.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.PowerShellValue`1.Expression">
+            <summary>
+            The PowerShell expression, which will be evaluated and retuned a type of T value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.PowerShellValue`1.UseDefaultInput">
+            <summary>
+            Determines whether to connect the input stream for this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.PowerShellValue`1.ExpressionScriptBlock">
+            <summary>
+            Get the scriptblock for this activity, caching it once it's compiled.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.Pipeline">
+            <summary>
+            The implementation of pipeline activity.
+            This similar concept which we have in PowerShell today like Get-Process | Stop-Process.
+            Pipline activity will make sure the piped execution of its child acitities.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.Pipeline.lastIndexHint">
+            <summary>
+            Tracks the number of current child activity in the collection.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.Pipeline.OutputStream">
+            <summary>
+            Maintain intermediate outflow of data from child activity.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Activities.Pipeline.InputStream">
+            <summary>
+            Maintain intermediate inflow of data into child activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.CacheMetadata(System.Activities.NativeActivityMetadata)">
+            <summary>
+            Validate the required number of activities of pipeline activity.
+            Setup the cachemetata with variables and activities.
+            </summary>
+            <param name="metadata"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Executes the first child activity
+            </summary>
+            <param name="executionContext">The execution context of pipeline activity.</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.InternalExecute(System.Activities.NativeActivityContext,System.Activities.ActivityInstance)">
+            <summary>
+            Get results from previous activity and schedule the execution of next activity.
+            </summary>
+            <param name="executionContext">The execution context of pipeline activity.</param>
+            <param name="completedInstance">The activity instance of completed child activity.</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.GetData(System.Activities.ActivityContext,System.Activities.Variable{System.Management.Automation.PSDataCollection{System.Management.Automation.PSObject}})">
+            <summary>
+            Get the data from the pipeline variable.
+            </summary>
+            <param name="context">The activity context.</param>
+            <param name="variable">The variable which value to get.</param>
+            <returns>Returns the value of the variable.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.Pipeline.SetData(System.Activities.ActivityContext,System.Activities.Variable{System.Management.Automation.PSDataCollection{System.Management.Automation.PSObject}},System.Management.Automation.PSDataCollection{System.Management.Automation.PSObject})">
+            <summary>
+            Set the data to the pipeline variable.
+            </summary>
+            <param name="context">The activity context.</param>
+            <param name="variable">The variable which needs to set.</param>
+            <param name="value">The value for the vriable.</param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Activities.Pipeline.Activities">
+            <summary>
+            Get activities.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Activities.PipelineDesigner">
+            <summary>
+            Interaction logic for PipelineDesigner.xaml
+            </summary>
+            <summary>
+            PipelineDesigner
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PipelineDesigner.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Activities.PipelineDesigner.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Workflow.AstToWorkflowConverter">
+            <summary>
+            Converts a PowerShell AST into a function that invokes the corresponding
+            script as a workflow job.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToWorkflowConverter.ValidateAst(System.Management.Automation.Language.FunctionDefinitionAst)">
+            <summary>
+            Provides the opportunity for job converters to validate the semantics of
+            the AST before compilation. This stage should be light-weight and as efficient
+            as possible.
+            </summary>
+            <param name="ast">The PowerShell AST correpsponding to the job's definition.</param>
+            <returns>A collection of PSParseErrors corresponding to any semantic issues in the AST.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToWorkflowConverter.CompileWorkflows(System.Management.Automation.Language.ScriptBlockAst,System.Management.Automation.PSModuleInfo)">
+            <summary>
+            Converts a PowerShell AST into a script block that represents
+            the workflow to run.
+            </summary>
+            <param name="ast">The PowerShell AST correpsponding to the job's definition.</param>
+            <param name="definingModule">The module that is defining this command (if any)</param>
+            <returns>
+            A PowerShell script block that invokes an underlying job,
+            based on the definition provided by this script block.
+            </returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToWorkflowConverter.CompileWorkflow(System.String,System.String,System.Management.Automation.Runspaces.InitialSessionState)">
+            <summary>
+            Compile a single workflow from it's definition as a string.
+            </summary>
+            <param name="name"></param>
+            <param name="definition"></param>
+            <param name="initialSessionState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToWorkflowConverter.GetActivityParameters(System.Management.Automation.Language.CommandAst)">
+            <summary>
+            Returns the parameters of the activity called by the <paramref name="commandAst"/>.
+            </summary>
+            <param name="commandAst">The ast representing the command called</param>
+            <returns>The parameters with their corresponding types, or null if the parameters cannot be found.</returns>
+        </member>
+        <member name="T:Microsoft.PowerShell.Workflow.AstToXamlConverter">
+            <summary>
+            Converts a PowerShell AST into the workflow XAML that represents it.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.#ctor(System.String,System.Management.Automation.Language.FunctionDefinitionAst,System.Management.Automation.PSModuleInfo,System.Collections.Generic.Dictionary{System.String,System.Type},System.Collections.Generic.HashSet{System.String},System.Boolean,Microsoft.PowerShell.Workflow.Scope,System.Management.Automation.PowerShell)">
+            <summary>
+            Creates a new PowerShellXaml converter
+            </summary>
+            <param name="name">The name of the command being converted</param>
+            <param name="workflowAstRoot">The AST that is the root of the PowerShell script to convert</param>
+            <param name="definingModule">The module that is defining this command (if any)</param>
+            <param name="activityMap">The dictionary mapping activities to their types.</param>
+            <param name="processedActivityLibraries">A hashset of activity libraries that the workflow depends on</param>
+            <param name="validateOnly">Only do validation.</param>
+            <param name="scope">Scope chain used to resolve commands lexically</param>
+            <param name="invoker"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.Convert(System.Management.Automation.Language.FunctionDefinitionAst,System.Management.Automation.PSModuleInfo,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.Management.Automation.Language.ParameterAst}@,System.Management.Automation.WorkflowInfo[]@,System.Collections.Generic.Dictionary{System.String,System.String}@,System.String@)">
+            <summary>
+            Converts a PowerShell AST into the XAML that represents it, also returning the cmdlet attribute string
+            for the workflow.
+            </summary>
+            <param name="ast">The PowerShell AST to convert</param>
+            <param name="definingModule">The module that is defining this command (if any)</param>
+            <param name="referencedAssemblies">The list of additional assemblies to search for workflow activities.</param>
+            <param name="parameterValidation">Any parameter validation applied to the parameters in the provided AST.</param>
+            <param name="nestedWorkflows">Any nested workflows required by this PowerShell AST.</param>
+            <param name="requiredAssemblies">All assemblies, including provided at API or proiveded in workfow definition, required by this PowerShell Workflow.</param>
+            <param name="workflowAttributes">The attribute string for the workflow if these is one.</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.Convert(System.String,System.String,System.Management.Automation.Runspaces.InitialSessionState)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="definition"></param>
+            <param name="initialSessionState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.Validate(System.Management.Automation.Language.FunctionDefinitionAst)">
+            <summary>
+            Validates a PowerShell AST as a valid workflow.
+            </summary>
+            <param name="ast">The PowerShell AST to convert</param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.ToString">
+            <summary>
+            Returns the XAML result of the AST compilation
+            </summary>
+            <returns>The XAML result of the AST compilation</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.GetPowerShellValueExpression(System.Management.Automation.Language.Ast)">
+            <summary>
+            Block variable scope prefix like "$GLOBAL:" and "$SCRIPT:". In script workflow,
+            the only valid scope prefix is "$WORKFLOW:". When generating expression for the
+            PowerShellValue activity, we need to remove the $WORKFLOW part. Otherwise it will
+            generate error during execution, becuase the prefix "WORKFLOW" is not actually 
+            supported in the PowerShell.
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.ResolveActivityType(System.String,System.Management.Automation.Language.CommandAst,System.Boolean,System.Management.Automation.CommandInfo@,System.Type[]@)">
+            <summary>
+            Resolve the activity type based on the given command name
+            </summary>
+            <param name="commandName"></param>
+            <param name="commandAst"></param>
+            <param name="throwError">Indicate the error action</param>
+            <param name="resolvedCommand">The CommandInfo instance resolved from the command name</param>
+            <param name="genericTypes">If it is a generic activity, genericTypes contains the actual types in the order they get declared</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.EncodeStringArgument(System.String,System.Boolean)">
+            <summary>
+            Utility to encode an expression so it can be inserted in the generated XAML.
+            </summary>
+            <param name="bareContent">The expression to encode</param>
+            <param name="isLiteral">
+            If true, the string should be wrapped in quotes to it works
+            like a literal expression.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.IsThrowStatementInParallelBlock(System.Management.Automation.Language.ThrowStatementAst)">
+            <summary>
+            Check if the 'Throw' statement is in a parallel block
+            </summary>
+            <param name="throwStatementAst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.GenerateXamlForThrowStatement(System.String,System.Boolean)">
+            <summary>
+            Generate the XAML for the 'Throw' statement
+            </summary>
+            <param name="variableName"></param>
+            <param name="isRethrow"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.AddOrRemoveSpecialKey(System.String,System.Boolean)">
+            <summary>
+            Add or remove the special key-value pair to/from the exception
+            </summary>
+            <param name="variableName"></param>
+            <param name="addKey"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.AddTryCatchForParallelStart">
+            <summary>
+            Start to add the Try/Catch block for the parallel statement/block
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Workflow.AstToXamlConverter.AddTryCatchForParallelEnd">
+            <summary>
+            Finish the Try/Catch block for the parallel statement/block
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.AstToXamlConverter.ParameterValidation">
+            <summary>
+            Any parameter validation attributes associated with this script block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.AstToXamlConverter.ValidateOnly">
+            <summary>
+            Set to True if workflow conversion should be done in validation mode.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.AstToXamlConverter.ParseErrors">
+            <summary>
+            Returns the list of errors found during validation / compilation
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.AstToXamlConverter.NestedWorkflows">
+            <summary>
+            Returns all nested workflows used by this command
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.AstToXamlConverter.CmdletAttributeText">
+            <summary>
+            Used to hold the CmdletBinding attribute string specified in the script workflow text.
+            This needs to be propigated to the synthesized driver function .
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.Delay">
+            <summary>
+            Delay activity
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.InlineScript">
+            <summary>
+            An InlineScript activity
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.InvokeExpression">
+            <summary>
+            Xaml injection activity. inline XAML
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.NewObject">
+            <summary>
+            New-Object activity
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.Persist">
+            <summary>
+            Persist activity
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.RegularCommand">
+            <summary>
+            Other command activity
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Workflow.AstToXamlConverter.ActivityKind.Suspend">
+            <summary>
+            Suspend activity
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Workflow.StorageVariable.IsAggregatingVariable">
+            <summary>
+            This indicates if the variable is one that will aggregate results from a parallel/sequence/foreach block.
+            For example:
+                workflow bar { $a = parallel { Get-Process -Name powershell; Get-Service -Name Dhcp } }
+            $a here will contain all results generated from the parallel block, including a process object "powershell" 
+            and a service object "Dhcp". We call $a an aggregating variable.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Workflow.PSWorkflowUnsupportedVariable">
+            <summary>
+            Used by Script->Xaml converter to give compile time error
+            for variables that are not supported in a workflow context.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.PowerShellMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PowerShellMetadata.Class">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PowerShellMetadata.Enums">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.Version">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.DefaultNoun">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.InstanceCmdlets">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.StaticCmdlets">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.CmdletAdapterPrivateData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.CmdletAdapter">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.ClassName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadata.ClassVersion">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataInstanceCmdlets">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataInstanceCmdlets.GetCmdletParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataInstanceCmdlets.GetCmdlet">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataInstanceCmdlets.Cmdlet">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletParameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletParameters.QueryableProperties">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletParameters.QueryableAssociations">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletParameters.QueryOptions">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletParameters.DefaultCmdletParameterSet">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.PropertyMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PropertyMetadata.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PropertyMetadata.Items">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PropertyMetadata.ItemsElementName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PropertyMetadata.PropertyName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.TypeMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.TypeMetadata.PSType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.TypeMetadata.ETSType">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.Association">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.Association.AssociatedInstance">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.Association.Association1">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.Association.SourceRole">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.Association.ResultRole">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.AssociationAssociatedInstance">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.AssociationAssociatedInstance.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.AssociationAssociatedInstance.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletFilteringParameter">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.AllowEmptyCollection">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.AllowEmptyString">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.AllowNull">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateNotNull">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateNotNullOrEmpty">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateLength">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateRange">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.ValidateSet">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.IsMandatory">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.IsMandatorySpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.Aliases">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.PSName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadata.Position">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter.ValueFromPipeline">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter.ValueFromPipelineSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter.ValueFromPipelineByPropertyName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter.ValueFromPipelineByPropertyNameSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletParameter.CmdletParameterSets">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletFilteringParameter.ErrorOnNoMatch">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForGetCmdletFilteringParameter.ErrorOnNoMatchSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateCount">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateCount.Min">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateCount.Max">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateLength">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateLength.Min">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateLength.Max">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateRange">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateRange.Min">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataValidateRange.Max">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForInstanceMethodParameter">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForInstanceMethodParameter.ValueFromPipelineByPropertyName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForInstanceMethodParameter.ValueFromPipelineByPropertyNameSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForStaticMethodParameter">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForStaticMethodParameter.ValueFromPipeline">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForStaticMethodParameter.ValueFromPipelineSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForStaticMethodParameter.ValueFromPipelineByPropertyName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletParameterMetadataForStaticMethodParameter.ValueFromPipelineByPropertyNameSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.QueryOption">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.QueryOption.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.QueryOption.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.QueryOption.OptionName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletMetadata.CmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.GetCmdletMetadata.GetCmdletParameters">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.Verb">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.Noun">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.Aliases">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.ConfirmImpact">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.ConfirmImpactSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonCmdletMetadata.HelpUri">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.ConfirmImpact">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ConfirmImpact.None">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ConfirmImpact.Low">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ConfirmImpact.Medium">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ConfirmImpact.High">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.StaticCmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticCmdletMetadata.CmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticCmdletMetadata.Method">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.StaticCmdletMetadataCmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticCmdletMetadataCmdletMetadata.DefaultCmdletParameterSet">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadata.ReturnValue">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadata.MethodName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodMetadata.Parameters">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodMetadata.CmdletParameterSet">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodParameterMetadata.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodParameterMetadata.ParameterName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodParameterMetadata.DefaultValue">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodParameterMetadata.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.StaticMethodParameterMetadata.CmdletOutputMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CmdletOutputMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletOutputMetadata.ErrorCode">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CmdletOutputMetadata.PSName">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.InstanceMethodParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceMethodParameterMetadata.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceMethodParameterMetadata.CmdletOutputMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadataReturnValue">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadataReturnValue.Type">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.CommonMethodMetadataReturnValue.CmdletOutputMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.InstanceMethodMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceMethodMetadata.Parameters">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.InstanceCmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceCmdletMetadata.CmdletMetadata">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceCmdletMetadata.Method">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.InstanceCmdletMetadata.GetCmdletParameters">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.PropertyQuery">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.PropertyQuery.CmdletParameterMetadata">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.WildcardablePropertyQuery">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.WildcardablePropertyQuery.AllowGlobbing">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.WildcardablePropertyQuery.AllowGlobbingSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.ItemsChoiceType">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ItemsChoiceType.ExcludeQuery">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ItemsChoiceType.MaxValueQuery">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ItemsChoiceType.MinValueQuery">
+            <remarks/>
+        </member>
+        <member name="F:Microsoft.PowerShell.Cmdletization.Xml.ItemsChoiceType.RegularQuery">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataData">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataData.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.ClassMetadataData.Value">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum.Value">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum.EnumName">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum.UnderlyingType">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum.BitwiseFlags">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnum.BitwiseFlagsSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnumValue">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnumValue.Name">
+            <remarks/>
+        </member>
+        <member name="P:Microsoft.PowerShell.Cmdletization.Xml.EnumMetadataEnumValue.Value">
+            <remarks/>
+        </member>
+        <member name="T:ActivityResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityDoesNotContainResultProperty">
+            <summary>
+              Looks up a localized string similar to Cannot assign the output of the &apos;{1}&apos; activity. It does not contain the &apos;Result&apos; property. If this is a workflow that calls another workflow, implement a Result property as a [ref] parameter..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityNameConflict">
+            <summary>
+              Looks up a localized string similar to Cannot generate activity. The name &apos;{0}&apos; is reserved..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityNameConflict1">
+            <summary>
+              Looks up a localized string similar to Cannot generate activity. The name &apos;{0}&apos; is reserved..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityNameNotFound">
+            <summary>
+              Looks up a localized string similar to Cannot generate activity. The command name &apos;{0}&apos; could not be found in the default runspace. Use the GenerateFromCommandInfo method to generate activities for non-default commands..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityNameNotFound1">
+            <summary>
+              Looks up a localized string similar to Cannot generate activity. The command name &apos;{0}&apos; could not be found in the default runspace. Use the GenerateFromCommandInfo method to generate activities for non-default commands..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityNotSupportedInPipeline">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; activity is not supported in a workflow pipeline..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ActivityParameterGroup">
+            <summary>
+              Looks up a localized string similar to Activity-Specific Parameters.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AlternateInvocationNotSupported">
+            <summary>
+              Looks up a localized string similar to Dot-sourcing (. &lt;command&gt;) and the invocation operator (&amp; &lt;command&gt;) are not supported in a Windows PowerShell Workflow. Wrap this command invocation into an inlinescript { } instead..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AmbiguousCommand">
+            <summary>
+              Looks up a localized string similar to The command name &apos;{0}&apos; is ambiguous and cannot be processed. To use this command, specify a module qualified name such as: &apos;Microsoft.PowerShell.Management\Get-Process&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AmbiguousParameter">
+            <summary>
+              Looks up a localized string similar to The parameter cannot be processed because the parameter name &apos;{0}&apos; is ambiguous. Possible matches include: {1}..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AmbiguousPropertiesFound">
+            <summary>
+              Looks up a localized string similar to Ambiguous properties are found for the property name &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AssignmentNotSupported">
+            <summary>
+              Looks up a localized string similar to This type of assignment is not supported. Only variable names (i.e.: $variable) may be used as the target of an assignment statement..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.AttributedExpressionNotSupported">
+            <summary>
+              Looks up a localized string similar to Attributed expression (i.e.: [Parameter()]$x) should be used only when declaring parameters for the script workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.BeginProcessNotSupported">
+            <summary>
+              Looks up a localized string similar to Begin, Process, and End statements are not supported in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.BreakContinueNotSupported">
+            <summary>
+              Looks up a localized string similar to Break and Continue statements are not supported in a Windows PowerShell Workflow. Instead, use an &apos;if&apos; statement to control loop execution..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotAssignStartSleepToVariable">
+            <summary>
+              Looks up a localized string similar to Cannot assign Start-Sleep to a variable. Start-Sleep generates no output..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotLaunchFormat">
+            <summary>
+              Looks up a localized string similar to Cannot start &quot;{0}&quot;. Interactive console applications are not supported in a Windows PowerShell Workflow. To run the application, use the Start-Process cmdlet..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotMergeErrorToOutput">
+            <summary>
+              Looks up a localized string similar to Cannot redirect the error stream to the output stream. The target activity &apos;{0}&apos; does not contain the property &apos;MergeErrorToOutput&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotProcessMoreThanOneScriptBlock">
+            <summary>
+              Looks up a localized string similar to Cannot process more than one script block..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotRedirectErrorStreamForNewObject">
+            <summary>
+              Looks up a localized string similar to Cannot redirect error stream for the New-Object activity..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotRedirectErrorStreamForStartSleep">
+            <summary>
+              Looks up a localized string similar to Cannot redirect error stream for the delay activity. Please remove the stream redirection from this activity and try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotSpecifyBothCommandAndCommandName">
+            <summary>
+              Looks up a localized string similar to &apos;Command&apos; is mutually exclusive with &apos;CommandName&apos;. Either specify  &apos;CommandName&apos; (optionally with &apos;Parameters&apos;),  or &apos;Command&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotSpecifyBothCommandAndCommandName1">
+            <summary>
+              Looks up a localized string similar to &apos;Command&apos; is mutually exclusive with &apos;CommandName&apos;. Either specify  &apos;CommandName&apos; (optionally with &apos;Parameters&apos;),  or &apos;Command&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotSpecifyResultArgument">
+            <summary>
+              Looks up a localized string similar to Assigning values to the Result argument is not supported. To store the output of a command, assign it to a variable. For example: $output = Get-Process..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotStoreResultsInUnsupportedElement">
+            <summary>
+              Looks up a localized string similar to Cannot store the results of this type of expression into a variable. Only the results of commands, pipelines, constant expressions, foreach statements, parallel and sequence statements can be stored in variables..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotStoreResultsInVariable">
+            <summary>
+              Looks up a localized string similar to Cannot store results in the variable &apos;{0}&apos;. Results are already being collected in the variable &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotSupplyUriAndComputername">
+            <summary>
+              Looks up a localized string similar to Cannot supply both connection URI and computer name..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotUseDataCollectingVariable">
+            <summary>
+              Looks up a localized string similar to The variable with name &apos;{0}&apos; is defined to store results from a parallel or sequence block. Therefore, it cannot be reused inside such blocks..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CannotUseWorkflowPrefixInInlineScript">
+            <summary>
+              Looks up a localized string similar to The scope prefix &quot;$WORKFLOW:&quot; cannot be used in an InlineScript activity. To reference a workflow variable in an InlineScript activity, use the prefix &quot;$USING:&quot; instead. Workflow variables cannot be modified from an InlineScript activity. To change a workflow variable, assign the output of the InlineScript activity to that variable..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CheckpointWorkflowSyntax">
+            <summary>
+              Looks up a localized string similar to The Checkpoint-Workflow command accepts no parameters..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommandActivityExcluded">
+            <summary>
+              Looks up a localized string similar to Cannot call the &apos;{0}&apos; command. Other commands from this module have been packaged as workflow activities, but this command was specifically excluded. This is likely because the command requires an interactive Windows PowerShell session, or has behavior not suited for workflows. To run this command anyway, place it within an inline-script (InlineScript {{ {0} }}) where it will be invoked in isolation..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommandHandledByKeyword">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; command is handled by the built-in &apos;{1}&apos; keyword. Use the built-in keyword instead..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommandNameRequired">
+            <summary>
+              Looks up a localized string similar to A command name is required..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommandNameRequired1">
+            <summary>
+              Looks up a localized string similar to A command name is required..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommandNotFound">
+            <summary>
+              Looks up a localized string similar to Cannot find the &apos;{0}&apos; command. If this command is defined as a workflow, ensure it is defined before the workflow that calls it. If it is a command intended to run directly within Windows PowerShell (or is not available on this system), place it in an InlineScript: &apos;InlineScript {{ {0} }}&apos;.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CommonParameterNotSupported">
+            <summary>
+              Looks up a localized string similar to Could not find a parameter named &apos;{0}&apos; for the &apos;{1}&apos; command. Windows PowerShell common parameters such as WhatIf and OutVariable are not supported..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ComputerNameNotValid">
+            <summary>
+              Looks up a localized string similar to The computer name {0} is not valid. If you are trying to supply a Uri, use the Uri parameter..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ComputerNameNotValid1">
+            <summary>
+              Looks up a localized string similar to The computer name {0} is not valid. If you are trying to supply a Uri, use the Uri parameter..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ConditionsCannotHaveSideEffects">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, loop conditions that modify variables are not supported. To change a variable, place the modification statement in the loop body itself..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ConditionsCannotInvokeActivities">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, loop conditions that invoke activities are not supported. Conditions can use only variable references, and Windows PowerShell language elements that interact with those variables..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ConnectivityGroup">
+            <summary>
+              Looks up a localized string similar to Connectivity.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CouldNotFindParameterName">
+            <summary>
+              Looks up a localized string similar to Could not find a parameter named &apos;{0}&apos;. Supported parameters are: {1}..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CouldNotFindParameterNameNested">
+            <summary>
+              Looks up a localized string similar to Could not find a parameter named &apos;{0}&apos;. Workflow-common parameters such as PSComputerName are not supported in nested workflows that already have nested workflows..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CouldNotFindParameterNameShadowedActivity">
+            <summary>
+              Looks up a localized string similar to Could not find a parameter named &apos;{0}&apos;. Note that this activity has the same name as a Windows PowerShell cmdlet, but different parameters. Supported parameters are: {1}..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.CouldNotLoadRequiredAssembly">
+            <summary>
+              Looks up a localized string similar to Could not load assembly &apos;{0}&apos; specified in the list of required assemblies..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DataSectionNotSupported">
+            <summary>
+              Looks up a localized string similar to Data sections are not supported in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DependModuleImportFailed">
+            <summary>
+              Looks up a localized string similar to Windows PowerShell Workflow cannot continue running the activity because an error occurred while importing dependent module(s) &apos;{0}&apos; specified for activity &apos;{1}&apos;.  To fix this problem, make sure that the module exists on the computer. If it is not required, remove references to the module from the activity..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DuplicateInputDefinedInPipeline">
+            <summary>
+              Looks up a localized string similar to Input is defined in Pipeline variable and in the first child activity. Input should be defined only at one place..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DuplicateInputDefinedInPipeline1">
+            <summary>
+              Looks up a localized string similar to Input is defined in the Pipeline activity and in the first child activity. Input should be defined in only one place..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DuplicateParametersNotAllowed">
+            <summary>
+              Looks up a localized string similar to Cannot bind parameter because parameter &apos;{0}&apos; is specified more than once. To provide multiple values to parameters that can accept multiple values, use the array syntax. For example, &quot;-parameter value1,value2,value3&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DuplicateResultDefinedInPipeline">
+            <summary>
+              Looks up a localized string similar to Result is defined in Pipeline variable and in the last child activity. Result should be defined at one place..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DuplicateResultDefinedInPipeline1">
+            <summary>
+              Looks up a localized string similar to The result is defined in the Pipeline variable, and in the last child activity. The result should be defined in only one place..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.DynamicParametersNotSupported">
+            <summary>
+              Looks up a localized string similar to Dynamic parameters are not supported in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.EnumWriter_InvalidEnumName">
+            <summary>
+              Looks up a localized string similar to The value of the EnumName attribute does not translate to a valid C# identifier: {0}. Verify the EnumName attribute in Cmdlet Definition XML, and then try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.EnumWriter_InvalidEnumName1">
+            <summary>
+              Looks up a localized string similar to The value of the EnumName attribute doesn&apos;t translate to a valid C# identifier: {0}.    Verify the EnumName attribute in Cmdlet Definition XML and try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.EnumWriter_InvalidValueName">
+            <summary>
+              Looks up a localized string similar to The value of the Name attribute is not a valid C# identifier: {0}. Verify the Name attribute in Cmdlet Definition XML and try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.EnumWriter_InvalidValueName1">
+            <summary>
+              Looks up a localized string similar to The value of the Name attribute is not a valid C# identifier: {0}.  Verify the Name attribute in Cmdlet Definition XML and try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.EnvironmentVariableAssignmentNotSupported">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, assignment to environment variables is not supported..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.FunctionRedefinitionNotAllowed">
+            <summary>
+              Looks up a localized string similar to The function or workflow &apos;{0}&apos; cannot be redefined..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.GenericParameterTypeNotFound">
+            <summary>
+              Looks up a localized string similar to The generic parameter type &apos;{0}&apos; for the parameter &apos;{1}&apos; cannot be resolved..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ImportLocalizedDataWithEmptyEmptyorNullBaseDirectory">
+            <summary>
+              Looks up a localized string similar to Cannot have an empty BaseDirectory for importing localized data. Please specify a valid BaseDirectory and run the command again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ImportLocalizedDataWithEmptyEmptyorNullBaseDirectory1">
+            <summary>
+              Looks up a localized string similar to Cannot have an empty BaseDirectory for importing localized data. Please specify a valid BaseDirectory and run the command again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InlineScriptSyntax">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the syntax for the InlineScript activity is &quot;InlineScript { &lt;commands&gt; }&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InlineXamlNotSupported">
+            <summary>
+              Looks up a localized string similar to Cannot create workflow. Inline XAML is not supported in this language mode..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InputAndOutputGroup">
+            <summary>
+              Looks up a localized string similar to Input and Output.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InputRequired">
+            <summary>
+              Looks up a localized string similar to The input parameter is required..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InputRequired1">
+            <summary>
+              Looks up a localized string similar to The input parameter is required..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InvalidCmdletBindingAttribute">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the CmdletBinding attribute only supports the following values: &quot;DefaultParameterSetName, ConfirmImpact, HelpUri, PositionalBinding&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InvalidMemberName">
+            <summary>
+              Looks up a localized string similar to {0} is not a valid parameter or variable name. Names must start with a letter, and contain only letters, digits, &apos;-&apos;, and &apos;_&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InvalidScopePrefixInWorkflow">
+            <summary>
+              Looks up a localized string similar to A variable scope prefix that is not valid was detected. The only valid scope prefix in the script workflow is &quot;$WORKFLOW:&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.InvokeExpressionSyntax">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the syntax for Invoke-Expression is: &quot;Invoke-Expression -Language XAML -Command &lt;string&gt;&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.LocalAndRemoteNodesCannotBeTogetherForRestartComputerActivity">
+            <summary>
+              Looks up a localized string similar to Restart-Computer activity cannot be run because both localhost and managed nodes are provided in the ComputerName parameter.  For this scenario please run Restart-Computer activity for managed nodes followed by another Restart-Computer activity for localhost..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.LocalAndRemoteNodesCannotBeTogetherForRestartComputerActivity1">
+            <summary>
+              Looks up a localized string similar to The Restart-Computer activity cannot run because both localhost and remote computers are provided in the ComputerName parameter.  For this scenario, run the Restart-Computer activity for remote computers first, followed by another Restart-Computer activity for localhost..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.LoopLabelNotSupported">
+            <summary>
+              Looks up a localized string similar to Loop labels are not supported in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.MethodInvocationNotSupported">
+            <summary>
+              Looks up a localized string similar to Method invocation is not supported in a Windows PowerShell Workflow. To use .NET scripting, place your commands in an inline script: InlineScript { &lt;commands&gt; }..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.MissingValueForParameter">
+            <summary>
+              Looks up a localized string similar to The value for the parameter &apos;{0}&apos; is not specified. To invoke this command, use explicit parameter names with all values. For example: &quot;Command -Parameter &lt;value&gt;&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.MustSupplyVariableReferenceForInOutArgument">
+            <summary>
+              Looks up a localized string similar to Parameter &apos;{0}&apos; is defined as an InOutArgument or OutArgument and can accept only variable references..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.MustUseXamlLanguage">
+            <summary>
+              Looks up a localized string similar to Invoke-Expression must use &quot;-Language XAML&quot; in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NewObjectCouldNotFindType">
+            <summary>
+              Looks up a localized string similar to Could not find type {0}. Load the type(s) and try again..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NewObjectMustBeAssigned">
+            <summary>
+              Looks up a localized string similar to The output of the New-Object cmdlet must be assigned to a variable..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NewObjectSyntax">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the syntax for New-Object is: &quot;New-Object -TypeName &lt;TypeName&gt;&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NoChildPipeline">
+            <summary>
+              Looks up a localized string similar to Pipeline activity works with at least one child activity..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NoChildPipeline1">
+            <summary>
+              Looks up a localized string similar to A pipeline activity must have at least one child activity..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NullArgumentExpression">
+            <summary>
+              Looks up a localized string similar to The following argument can not be null or empty: Expression.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NullArgumentExpression1">
+            <summary>
+              Looks up a localized string similar to The following argument cannot be null or empty: Expression.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NullReturnedAfterExpressionEvaluation">
+            <summary>
+              Looks up a localized string similar to The result of Windows PowerShell expression evaluation is null or nothing.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.NullReturnedAfterExpressionEvaluation1">
+            <summary>
+              Looks up a localized string similar to The result of Windows PowerShell expression evaluation is null or nothing..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.OnlyOneRequiresStatement">
+            <summary>
+              Looks up a localized string similar to You can provide only one #requires statement per script..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.OnlySimpleParameterDefaultsSupported">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, parameter defaults may only be simple value types (such as integers) and strings. In addition, the type of the default value must match the type of the parameter..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.OnlySimpleVariableReferencesSupportedInUnary">
+            <summary>
+              Looks up a localized string similar to Only simple variable references (i.e.: $x) and number constants are supported in a unary expression..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.OnlySupportErrorStreamRedirection">
+            <summary>
+              Looks up a localized string similar to Only the merging redirection from the error stream to the output stream is supported..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.OperatorRequiresVariable">
+            <summary>
+              Looks up a localized string similar to Unary operators &apos;++&apos; and &apos;--&apos; work only on variables in the script workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ParallelSequenceScriptBlockSyntax">
+            <summary>
+              Looks up a localized string similar to The syntax of a {0} script block is &apos;{0} { &lt;commands&gt; }&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ParameterValidationNotSupportedOnNestedWorkflows">
+            <summary>
+              Looks up a localized string similar to Advanced parameter validation is not supported on nested workflows..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.PositionalParametersNotSupported">
+            <summary>
+              Looks up a localized string similar to Positional parameters are not supported in a Windows PowerShell Workflow. To invoke this command, use explicit parameter names with all values. For example: &quot;Command -Parameter &lt;value&gt;&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ProgressPositionMessage">
+            <summary>
+              Looks up a localized string similar to  {0} line:{1} char:{2}.
+            </summary>
+        </member>
+        <member name="P:ActivityResources.PropertyDoesNotSupportPowerShellLanguage">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; property does not support elements from the Windows PowerShell language such as parentheses and variables. To use this value, enclose it in a single-quoted string..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ReasonRequiredInThrowStatement">
+            <summary>
+              Looks up a localized string similar to The throw statement requires a reason..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.RecursiveWorkflowNotSupported">
+            <summary>
+              Looks up a localized string similar to A workflow cannot use recursion..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.RemotingHandledByPSComputerName">
+            <summary>
+              Looks up a localized string similar to Could not find a parameter named &apos;ComputerName&apos;. Remote connectivity in this command is handled by the &apos;PSComputerName&apos; parameter..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.RestartComputerWithWaitNotAllowed">
+            <summary>
+              Looks up a localized string similar to Parameter &apos;Wait&apos; cannot be used for Restart-Computer activity when the localhost is being restarted..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.RestartComputerWithWaitNotAllowed1">
+            <summary>
+              Looks up a localized string similar to Parameter &apos;Wait&apos; cannot be used for Restart-Computer activity when the localhost is being restarted..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.RunningTimeExceeded">
+            <summary>
+              Looks up a localized string similar to The activity has exceeded the specified maximum running time of {0} seconds..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ScriptBlockInvocationNotSupported">
+            <summary>
+              Looks up a localized string similar to Script block invocation is not supported in a Windows PowerShell Workflow. To run a set of commands in a similar way as the script block invocation, place your commands in an inline script: InlineScript { &lt;commands&gt; }..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SessionStateEntryNotSupported">
+            <summary>
+              Looks up a localized string similar to The session state entry type &apos;{0}&apos; is not supported..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.StartSleepSyntax">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the syntax for Start-Sleep is: &quot;Start-Sleep -Seconds &lt;int&gt;&quot; or &quot;Start-Sleep -Milliseconds &lt;int&gt;&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SubExpressionNotSupported">
+            <summary>
+              Looks up a localized string similar to Sub expression (i.e.: $($x)) should only be used as the parameter value in a Windows PowerShell Workflow. To use .NET scripting, place your commands in an inline script: InlineScript { &lt;commands&gt; }..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SuspendWorkflowSyntax">
+            <summary>
+              Looks up a localized string similar to The Suspend-Workflow command accepts only one optional parameter, the syntax for Suspend-Workflow is: &quot;Suspend-Workflow [-Label &lt;string&gt;]&quot;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SwitchCaseSensitive">
+            <summary>
+              Looks up a localized string similar to Case-insensitive switch statements are not supported in a Windows PowerShell Workflow. Supply the -CaseSensitive flag, and ensure that case clauses are written appropriately. To write a case-insensitive case statement, first convert the input to either uppercase or lowercase, and update the case clauses to match..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SwitchClauseMustBeOfSameType">
+            <summary>
+              Looks up a localized string similar to Switch clauses must all be of the same type in a Windows PowerShell Workflow, or the condition expression must be strongly typed..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SwitchEnumerationNotSupported">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, switch statements support only expressions that return a single element..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SwitchFlagNotSupported">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, the switch statement supports only the &apos;CaseSensitive&apos; flag..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.SwitchOnlySupportsConstantExpression">
+            <summary>
+              Looks up a localized string similar to Only constant expressions are supported as switch clauses in a Windows PowerShell Workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.ThrowStatementCannotInvokeActivities">
+            <summary>
+              Looks up a localized string similar to In a Windows PowerShell Workflow, throw statements that invoke activities (other than New-Object) are not supported. Throw statements can use only strings, variable references, and Windows PowerShell language elements..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.TrapNotSupported">
+            <summary>
+              Looks up a localized string similar to Trap statements are not supported in a Windows PowerShell Workflow. Instead, use try, catch, or finally..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.TypeFromDynamicAssembly">
+            <summary>
+              Looks up a localized string similar to Cannot create workflow. It depends on the type, &apos;{0}&apos;, which was generated dynamically..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.VariableAlreadyDefined">
+            <summary>
+              Looks up a localized string similar to Cannot define variable. A variable with name &apos;{0}&apos; has already been defined. To reference a variable from the top-level scope of this workflow, use the syntax: &apos;$WORKFLOW:{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.VariableNameReserved">
+            <summary>
+              Looks up a localized string similar to The variable &apos;{0}&apos; is read-only. To change this variable, use the Set-PSWorkflowData activity..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.VariableNotSupportedInWorkflow">
+            <summary>
+              Looks up a localized string similar to The variable &apos;{0}&apos; cannot be used in a script workflow..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.WorkflowScopeOnlyValidInParallelOrSequenceBlock">
+            <summary>
+              Looks up a localized string similar to Cannot define variable. Scope names are only valid in a parallel or sequence block. Within a parallel or sequence block, the only valid scope name is &apos;workflow&apos;..
+            </summary>
+        </member>
+        <member name="P:ActivityResources.Xml_cmdletsOverObjectsXsd">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;!-- ##################################################################
+            Copyright (c) Microsoft Corporation.  All rights reserved.
+            ################################################################### --&gt;
+            &lt;!DOCTYPE schema [
+              &lt;!ENTITY csharpIdentifierLetterCharacterRegex &quot;\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}&quot;&gt;
+              &lt;!ENTITY csharpIdentifierFirstCharacterRegex &quot;&amp;csharpIdentifierLetterCharacterRegex;_&quot;&gt;
+              &lt;!ENTITY csharpIdentifierOtherCharacterRegex &quot;&amp;csharpIdentifierL [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,3993 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.Management.Activities</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.Management.Activities.AddComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Add-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.AddComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.AddComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.LocalCredential">
+            <summary>
+            Provides access to the LocalCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.UnjoinDomainCredential">
+            <summary>
+            Provides access to the UnjoinDomainCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.DomainName">
+            <summary>
+            Provides access to the DomainName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.OUPath">
+            <summary>
+            Provides access to the OUPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Server">
+            <summary>
+            Provides access to the Server parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Unsecure">
+            <summary>
+            Provides access to the Unsecure parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Options">
+            <summary>
+            Provides access to the Options parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.WorkGroupName">
+            <summary>
+            Provides access to the WorkGroupName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Restart">
+            <summary>
+            Provides access to the Restart parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.NewName">
+            <summary>
+            Provides access to the NewName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddComputer.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.AddContent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Add-Content command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.AddContent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.AddContent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Encoding">
+            <summary>
+            Provides access to the Encoding parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.AddContent.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.CheckpointComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Checkpoint-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CheckpointComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CheckpointComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CheckpointComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CheckpointComputer.Description">
+            <summary>
+            Provides access to the Description parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CheckpointComputer.RestorePointType">
+            <summary>
+            Provides access to the RestorePointType parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ClearContent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Clear-Content command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearContent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearContent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearContent.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ClearEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Clear-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ClearItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Clear-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ClearItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Clear-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ClearItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ClearItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ConvertPath">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Convert-Path command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ConvertPath.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ConvertPath.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ConvertPath.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ConvertPath.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ConvertPath.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.CopyItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Copy-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CopyItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CopyItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Destination">
+            <summary>
+            Provides access to the Destination parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Container">
+            <summary>
+            Provides access to the Container parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Recurse">
+            <summary>
+            Provides access to the Recurse parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.CopyItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Copy-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CopyItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.CopyItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Destination">
+            <summary>
+            Provides access to the Destination parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.CopyItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.DisableComputerRestore">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Disable-ComputerRestore command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.DisableComputerRestore.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.DisableComputerRestore.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.DisableComputerRestore.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.DisableComputerRestore.Drive">
+            <summary>
+            Provides access to the Drive parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.EnableComputerRestore">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Enable-ComputerRestore command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.EnableComputerRestore.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.EnableComputerRestore.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.EnableComputerRestore.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.EnableComputerRestore.Drive">
+            <summary>
+            Provides access to the Drive parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetChildItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-ChildItem command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetChildItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetChildItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Recurse">
+            <summary>
+            Provides access to the Recurse parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Attributes">
+            <summary>
+            Provides access to the Attributes parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Directory">
+            <summary>
+            Provides access to the Directory parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.File">
+            <summary>
+            Provides access to the File parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.Hidden">
+            <summary>
+            Provides access to the Hidden parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.ReadOnly">
+            <summary>
+            Provides access to the ReadOnly parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetChildItem.System">
+            <summary>
+            Provides access to the System parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-ComputerRestorePoint command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint.RestorePoint">
+            <summary>
+            Provides access to the RestorePoint parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetComputerRestorePoint.LastStatus">
+            <summary>
+            Provides access to the LastStatus parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetContent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-Content command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetContent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetContent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.ReadCount">
+            <summary>
+            Provides access to the ReadCount parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.TotalCount">
+            <summary>
+            Provides access to the TotalCount parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Tail">
+            <summary>
+            Provides access to the Tail parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Delimiter">
+            <summary>
+            Provides access to the Delimiter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Raw">
+            <summary>
+            Provides access to the Raw parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Encoding">
+            <summary>
+            Provides access to the Encoding parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetContent.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.Newest">
+            <summary>
+            Provides access to the Newest parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.After">
+            <summary>
+            Provides access to the After parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.Before">
+            <summary>
+            Provides access to the Before parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.UserName">
+            <summary>
+            Provides access to the UserName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.InstanceId">
+            <summary>
+            Provides access to the InstanceId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.Index">
+            <summary>
+            Provides access to the Index parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.EntryType">
+            <summary>
+            Provides access to the EntryType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.Source">
+            <summary>
+            Provides access to the Source parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.Message">
+            <summary>
+            Provides access to the Message parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.AsBaseObject">
+            <summary>
+            Provides access to the AsBaseObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.List">
+            <summary>
+            Provides access to the List parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.AsString">
+            <summary>
+            Provides access to the AsString parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetHotFix">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-HotFix command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetHotFix.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetHotFix.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetHotFix.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetHotFix.HotFixId">
+            <summary>
+            Provides access to the HotFixId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetHotFix.Description">
+            <summary>
+            Provides access to the Description parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetHotFix.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetHotFix.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItem.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetLocation">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-Location command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetLocation.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetLocation.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetLocation.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetLocation.PSProvider">
+            <summary>
+            Provides access to the PSProvider parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetLocation.PSDrive">
+            <summary>
+            Provides access to the PSDrive parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetLocation.Stack">
+            <summary>
+            Provides access to the Stack parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetLocation.StackName">
+            <summary>
+            Provides access to the StackName parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetProcess">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-Process command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetProcess.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetProcess.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.ProcessId">
+            <summary>
+            Provides access to the ProcessId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.Module">
+            <summary>
+            Provides access to the Module parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.FileVersionInfo">
+            <summary>
+            Provides access to the FileVersionInfo parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetProcess.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetPSDrive">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-PSDrive command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetPSDrive.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetPSDrive.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSDrive.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSDrive.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSDrive.LiteralName">
+            <summary>
+            Provides access to the LiteralName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSDrive.Scope">
+            <summary>
+            Provides access to the Scope parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSDrive.PSProvider">
+            <summary>
+            Provides access to the PSProvider parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetPSProvider">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-PSProvider command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetPSProvider.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetPSProvider.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSProvider.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetPSProvider.PSProvider">
+            <summary>
+            Provides access to the PSProvider parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.GetService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Get-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.GetService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.DependentServices">
+            <summary>
+            Provides access to the DependentServices parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.RequiredServices">
+            <summary>
+            Provides access to the RequiredServices parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.GetService.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.InvokeItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Invoke-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.InvokeItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.InvokeItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.InvokeItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.JoinPath">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Join-Path command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.JoinPath.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.JoinPath.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.JoinPath.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.JoinPath.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.JoinPath.ChildPath">
+            <summary>
+            Provides access to the ChildPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.JoinPath.Resolve">
+            <summary>
+            Provides access to the Resolve parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.JoinPath.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.LimitEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Limit-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.LimitEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.LimitEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.RetentionDays">
+            <summary>
+            Provides access to the RetentionDays parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.OverflowAction">
+            <summary>
+            Provides access to the OverflowAction parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.MaximumSize">
+            <summary>
+            Provides access to the MaximumSize parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.LimitEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.MoveItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Move-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.MoveItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.MoveItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Destination">
+            <summary>
+            Provides access to the Destination parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.MoveItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Move-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.MoveItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.MoveItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Destination">
+            <summary>
+            Provides access to the Destination parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.MoveItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.NewEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\New-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.CategoryResourceFile">
+            <summary>
+            Provides access to the CategoryResourceFile parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.MessageResourceFile">
+            <summary>
+            Provides access to the MessageResourceFile parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.ParameterResourceFile">
+            <summary>
+            Provides access to the ParameterResourceFile parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.Source">
+            <summary>
+            Provides access to the Source parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.NewItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\New-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.ItemType">
+            <summary>
+            Provides access to the ItemType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.NewItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\New-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.PropertyType">
+            <summary>
+            Provides access to the PropertyType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.NewService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\New-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.BinaryPathName">
+            <summary>
+            Provides access to the BinaryPathName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.Description">
+            <summary>
+            Provides access to the Description parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.StartupType">
+            <summary>
+            Provides access to the StartupType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewService.DependsOn">
+            <summary>
+            Provides access to the DependsOn parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\New-WebServiceProxy command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.Uri">
+            <summary>
+            Provides access to the Uri parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.Class">
+            <summary>
+            Provides access to the Class parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.NewWebServiceProxy.UseDefaultCredential">
+            <summary>
+            Provides access to the UseDefaultCredential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Register-WmiEvent command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Class">
+            <summary>
+            Provides access to the Class parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Query">
+            <summary>
+            Provides access to the Query parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Timeout">
+            <summary>
+            Provides access to the Timeout parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.SourceIdentifier">
+            <summary>
+            Provides access to the SourceIdentifier parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Action">
+            <summary>
+            Provides access to the Action parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.MessageData">
+            <summary>
+            Provides access to the MessageData parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.SupportEvent">
+            <summary>
+            Provides access to the SupportEvent parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.Forward">
+            <summary>
+            Provides access to the Forward parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RegisterWmiEvent.MaxTriggerCount">
+            <summary>
+            Provides access to the MaxTriggerCount parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RemoveComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Remove-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.UnjoinDomainCredential">
+            <summary>
+            Provides access to the UnjoinDomainCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.LocalCredential">
+            <summary>
+            Provides access to the LocalCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.Restart">
+            <summary>
+            Provides access to the Restart parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.Workgroup">
+            <summary>
+            Provides access to the Workgroup parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveComputer.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RemoveEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Remove-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveEventLog.Source">
+            <summary>
+            Provides access to the Source parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RemoveItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Remove-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Recurse">
+            <summary>
+            Provides access to the Recurse parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItem.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RemoveItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Remove-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RemoveWmiObject">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Remove-WmiObject command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Class">
+            <summary>
+            Provides access to the Class parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.AsJob">
+            <summary>
+            Provides access to the AsJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Locale">
+            <summary>
+            Provides access to the Locale parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.EnableAllPrivileges">
+            <summary>
+            Provides access to the EnableAllPrivileges parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Authority">
+            <summary>
+            Provides access to the Authority parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RemoveWmiObject.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RenameComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Rename-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.DomainCredential">
+            <summary>
+            Provides access to the DomainCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.LocalCredential">
+            <summary>
+            Provides access to the LocalCredential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.NewName">
+            <summary>
+            Provides access to the NewName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.Restart">
+            <summary>
+            Provides access to the Restart parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameComputer.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RenameItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Rename-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.NewName">
+            <summary>
+            Provides access to the NewName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RenameItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Rename-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RenameItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.NewName">
+            <summary>
+            Provides access to the NewName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RenameItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Reset-ComputerMachinePassword command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword.Server">
+            <summary>
+            Provides access to the Server parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResetComputerMachinePassword.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ResolvePath">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Resolve-Path command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResolvePath.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResolvePath.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResolvePath.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResolvePath.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResolvePath.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResolvePath.Relative">
+            <summary>
+            Provides access to the Relative parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResolvePath.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RestartService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Restart-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RestoreComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Restore-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestoreComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestoreComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestoreComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestoreComputer.RestorePoint">
+            <summary>
+            Provides access to the RestorePoint parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.ResumeService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Resume-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResumeService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.ResumeService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.ResumeService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SetContent">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Set-Content command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetContent.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetContent.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Encoding">
+            <summary>
+            Provides access to the Encoding parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetContent.Stream">
+            <summary>
+            Provides access to the Stream parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SetItem">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Set-Item command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetItem.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetItem.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItem.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SetItemProperty">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Set-ItemProperty command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetItemProperty.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetItemProperty.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Value">
+            <summary>
+            Provides access to the Value parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetItemProperty.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SetService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Set-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.Description">
+            <summary>
+            Provides access to the Description parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.StartupType">
+            <summary>
+            Provides access to the StartupType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.Status">
+            <summary>
+            Provides access to the Status parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetService.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SetWmiInstance">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Set-WmiInstance command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetWmiInstance.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SetWmiInstance.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Class">
+            <summary>
+            Provides access to the Class parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Arguments">
+            <summary>
+            Provides access to the Arguments parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.PutType">
+            <summary>
+            Provides access to the PutType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.AsJob">
+            <summary>
+            Provides access to the AsJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Locale">
+            <summary>
+            Provides access to the Locale parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.EnableAllPrivileges">
+            <summary>
+            Provides access to the EnableAllPrivileges parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Authority">
+            <summary>
+            Provides access to the Authority parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SetWmiInstance.Namespace">
+            <summary>
+            Provides access to the Namespace parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SplitPath">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Split-Path command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SplitPath.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SplitPath.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Qualifier">
+            <summary>
+            Provides access to the Qualifier parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.NoQualifier">
+            <summary>
+            Provides access to the NoQualifier parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Parent">
+            <summary>
+            Provides access to the Parent parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Leaf">
+            <summary>
+            Provides access to the Leaf parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Resolve">
+            <summary>
+            Provides access to the Resolve parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.IsAbsolute">
+            <summary>
+            Provides access to the IsAbsolute parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SplitPath.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.StartProcess">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Start-Process command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StartProcess.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StartProcess.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.FilePath">
+            <summary>
+            Provides access to the FilePath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.ArgumentList">
+            <summary>
+            Provides access to the ArgumentList parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.WorkingDirectory">
+            <summary>
+            Provides access to the WorkingDirectory parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.LoadUserProfile">
+            <summary>
+            Provides access to the LoadUserProfile parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.NoNewWindow">
+            <summary>
+            Provides access to the NoNewWindow parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.RedirectStandardError">
+            <summary>
+            Provides access to the RedirectStandardError parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.RedirectStandardInput">
+            <summary>
+            Provides access to the RedirectStandardInput parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.RedirectStandardOutput">
+            <summary>
+            Provides access to the RedirectStandardOutput parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.Verb">
+            <summary>
+            Provides access to the Verb parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.WindowStyle">
+            <summary>
+            Provides access to the WindowStyle parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartProcess.UseNewEnvironment">
+            <summary>
+            Provides access to the UseNewEnvironment parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.StartService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Start-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StartService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StartService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StartService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.StopComputer">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Stop-Computer command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.AsJob">
+            <summary>
+            Provides access to the AsJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopComputer.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.StopProcess">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Stop-Process command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopProcess.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopProcess.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.ProcessId">
+            <summary>
+            Provides access to the ProcessId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopProcess.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.StopService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Stop-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.StopService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.StopService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.SuspendService">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Suspend-Service command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SuspendService.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.SuspendService.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.PassThru">
+            <summary>
+            Provides access to the PassThru parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.ServiceDisplayName">
+            <summary>
+            Provides access to the ServiceDisplayName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.SuspendService.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Test-ComputerSecureChannel command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.Repair">
+            <summary>
+            Provides access to the Repair parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.Server">
+            <summary>
+            Provides access to the Server parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestComputerSecureChannel.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.TestConnection">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Test-Connection command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestConnection.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestConnection.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.AsJob">
+            <summary>
+            Provides access to the AsJob parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Authentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.BufferSize">
+            <summary>
+            Provides access to the BufferSize parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.ComputerName">
+            <summary>
+            Provides access to the ComputerName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Count">
+            <summary>
+            Provides access to the Count parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Source">
+            <summary>
+            Provides access to the Source parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.TimeToLive">
+            <summary>
+            Provides access to the TimeToLive parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Delay">
+            <summary>
+            Provides access to the Delay parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestConnection.Quiet">
+            <summary>
+            Provides access to the Quiet parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.TestPath">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Test-Path command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestPath.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.TestPath.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.Path">
+            <summary>
+            Provides access to the Path parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.LiteralPath">
+            <summary>
+            Provides access to the LiteralPath parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.Filter">
+            <summary>
+            Provides access to the Filter parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.Include">
+            <summary>
+            Provides access to the Include parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.Exclude">
+            <summary>
+            Provides access to the Exclude parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.PathType">
+            <summary>
+            Provides access to the PathType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.IsValid">
+            <summary>
+            Provides access to the IsValid parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.Credential">
+            <summary>
+            Provides access to the Credential parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.OlderThan">
+            <summary>
+            Provides access to the OlderThan parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.TestPath.NewerThan">
+            <summary>
+            Provides access to the NewerThan parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.WaitProcess">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Wait-Process command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.WaitProcess.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.WaitProcess.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WaitProcess.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WaitProcess.ProcessId">
+            <summary>
+            Provides access to the ProcessId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WaitProcess.Name">
+            <summary>
+            Provides access to the Name parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WaitProcess.Timeout">
+            <summary>
+            Provides access to the Timeout parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WaitProcess.InputObject">
+            <summary>
+            Provides access to the InputObject parameter.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.WriteEventLog">
+            <summary>
+            Activity to invoke the Microsoft.PowerShell.Management\Write-EventLog command in a Workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.WriteEventLog.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.WriteEventLog.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.LogName">
+            <summary>
+            Provides access to the LogName parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.Source">
+            <summary>
+            Provides access to the Source parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.EntryType">
+            <summary>
+            Provides access to the EntryType parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.Category">
+            <summary>
+            Provides access to the Category parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.EventId">
+            <summary>
+            Provides access to the EventId parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.Message">
+            <summary>
+            Provides access to the Message parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.RawData">
+            <summary>
+            Provides access to the RawData parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.WriteEventLog.SupportsCustomRemoting">
+            <summary>
+            Declares that this activity supports its own remoting.
+            </summary>        
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RestartActivityContext">
+            <summary>
+            RestartActivityContext
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Management.Activities.RestartActivityContext.NeedsRestart">
+            <summary>
+            Indicates whether a self restart is needed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Management.Activities.RestartComputer">
+            <summary>
+            RestartComputerActivity
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.#ctor">
+            <summary>
+            Gets the display name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.GetPowerShell(System.Activities.NativeActivityContext)">
+            <summary>
+            Returns a configured instance of System.Management.Automation.PowerShell, pre-populated with the command to run.
+            </summary>
+            <param name="context">The NativeActivityContext for the currently running activity.</param>
+            <returns>A populated instance of Sytem.Management.Automation.PowerShell</returns>
+            <remarks>The infrastructure takes responsibility for closing and disposing the PowerShell instance returned.</remarks>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.Execute(System.Activities.NativeActivityContext)">
+            <summary>
+            Execute this command for this activity.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.IsSelfRestart(System.Activities.NativeActivityContext)">
+            <summary>
+            Test to see if we're restarting the machine we're running on.
+            </summary>
+            <param name="context"></param>
+            <returns>true if we are restarting the local machine.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.GetPSComputerName(System.Activities.NativeActivityContext)">
+            <summary>
+            Gets the PSComputerName argument from the context
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.Management.Activities.RestartComputer.CacheMetadata(System.Activities.NativeActivityMetadata)">
+            <summary>
+            CacheMetadata
+            </summary>
+            <param name="metadata"></param>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.DisableSelfRestart">
+            <summary>
+            If true, them the workflow will not checkpoint and resume after
+            the computer is restarted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.PSCommandName">
+            <summary>
+            Gets the fully qualified name of the command invoked by this activity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.DcomAuthentication">
+            <summary>
+            Provides access to the Authentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Impersonation">
+            <summary>
+            Provides access to the Impersonation parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.WsmanAuthentication">
+            <summary>
+            Provides access to the WsmanAuthentication parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Protocol">
+            <summary>
+            Provides access to the Protocol parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.PSComputerName">
+            <summary>
+            The computer name to invoke this activity on.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.PSCredential">
+            <summary>
+            Defines the credential to use in the remote connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Force">
+            <summary>
+            Provides access to the Force parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.ThrottleLimit">
+            <summary>
+            Provides access to the ThrottleLimit parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Wait">
+            <summary>
+            Provides access to the Wait parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Timeout">
+            <summary>
+            Provides access to the Timeout parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.For">
+            <summary>
+            Provides access to the For parameter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.Management.Activities.RestartComputer.Delay">
+            <summary>
+            Provides access to the Delay parameter.
+            </summary>
+        </member>
+    </members>
+</doc>
