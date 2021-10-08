@@ -1,3 +1,6 @@
+[![Download](https://img.shields.io/github/v/release/coofcookie/Windows11Upgrade)](https://github.com/coofcookie/Windows11Upgrade/releases/latest/)
+[![Download count)](https://img.shields.io/github/downloads/coofcookie/Windows11Upgrade/total?label=Downloads)](https://github.com/coofcookie/Windows11Upgrade/releases/latest/)
+
 # Windows11Upgrade
 Windows 11 Upgrade tool that bypasses new Microsoft´s requirements
 
