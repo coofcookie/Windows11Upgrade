@@ -34,3 +34,17 @@ See [LICENSE](LICENSE) for the full license text.
 ## Credits
 
 Credits to [AveYo](https://gist.github.com/AveYo) for bypass.
+
+## Donations
+
+You can support the development of this and my future projects. 
+<div>
+  <a
+     href="https://commerce.coinbase.com/checkout/125a3335-6035-4504-994c-5775e8cce81d">
+    Donate with cryptocurrencies
+  </a><br>
+  <a
+     href="https://ko-fi.com/coofcookie">
+    Buy me a coffee
+  </a>
+</div>
