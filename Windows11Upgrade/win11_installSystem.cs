@@ -51,7 +51,7 @@ $N = 'Skip TPM Check on Dynamic Update'
             else
                 setupConfig += "upgrade";
 
-            setupConfig += " /eula accept /compat ignorewarning /priority normal";
+            setupConfig += " /eula accept /dynamicupdate disable /compat ignorewarning /migneo disable /priority normal";
 
             Process.Start(globals.mountedDriveLetter + ":\\Setup.exe", setupConfig);
             Environment.Exit(0);
