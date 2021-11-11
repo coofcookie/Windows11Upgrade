@@ -27,15 +27,14 @@ namespace Windows11Upgrade {
             langagesFiltered = "<options>" + langagesFiltered + "</options>";
             var languagesXml = new XmlDocument();
             languagesXml.LoadXml(langagesFiltered);
-            foreach (XmlNode language in languagesXml.GetElementsByTagName("option"))
-            foreach (XmlAttribute languageAttribute in language.Attributes)
-                if (languageAttribute.Value.StartsWith("{")) {
-                    dynamic languageJson = JsonConvert.DeserializeObject(languageAttribute.Value);
-                    var current = new Language();
-                    current.language = languageJson["language"];
-                    current.id = languageJson["id"];
-                    languages.Add(current);
+            foreach (XmlNode language in languagesXml.GetElementsByTagName("option")) {
+                var attribute = language.Attributes.GetNamedItem("value");
+                if (attribute == null || string.IsNullOrEmpty(attribute.Value)) {
+                    continue;
                 }
+
+                languages.Add(JsonConvert.DeserializeObject<Language>(attribute.Value));
+            }
 
             foreach (var item in languages) listLanguages.Items.Add(item.language);
         }
