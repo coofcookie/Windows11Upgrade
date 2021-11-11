@@ -66,15 +66,19 @@ namespace Windows11Upgrade {
             downloadFiltered = downloadFiltered.Replace("&nbsp;", " ");
             var downloadXml = new XmlDocument();
             downloadXml.LoadXml(downloadFiltered);
-            foreach (XmlNode downloadLink in downloadXml.GetElementsByTagName("input"))
-            foreach (XmlAttribute downloadAttribute in downloadLink.Attributes)
-                if (downloadAttribute.Value.StartsWith("{") && downloadAttribute.Value.Contains("Uri")) {
-                    dynamic downloadJson = JsonConvert.DeserializeObject(downloadAttribute.Value);
-                    globals.downloadURL = downloadJson["Uri"];
-                    Hide();
-                    var downloadSystem = new win11_downloadSystem();
-                    downloadSystem.Show();
+            foreach (XmlNode downloadLink in downloadXml.GetElementsByTagName("input")) {
+                var attribute = downloadLink.Attributes.GetNamedItem("value");
+                if (attribute == null || string.IsNullOrEmpty(attribute.Value)) {
+                    continue;
                 }
+
+                dynamic downloadJson = JsonConvert.DeserializeObject(attribute.Value);
+                globals.downloadURL = downloadJson["Uri"];
+                Hide();
+                var downloadSystem = new win11_downloadSystem();
+                downloadSystem.Show();
+                break;
+            }
         }
 
         private void exit(object sender, FormClosingEventArgs e) {
