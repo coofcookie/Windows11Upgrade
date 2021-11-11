@@ -32,17 +32,17 @@ namespace Windows11Upgrade {
                 if (languageAttribute.Value.StartsWith("{")) {
                     dynamic languageJson = JsonConvert.DeserializeObject(languageAttribute.Value);
                     var current = new Language();
-                    current.name = languageJson["language"];
+                    current.language = languageJson["language"];
                     current.id = languageJson["id"];
                     languages.Add(current);
                 }
 
-            foreach (var item in languages) listLanguages.Items.Add(item.name);
+            foreach (var item in languages) listLanguages.Items.Add(item.language);
         }
 
         private void languageList_SelectionChange(object sender, EventArgs e) {
             btnDownloadSystem.Enabled = true;
-            btnDownloadSystem.Text = "Download " + languages[listLanguages.SelectedIndex].name + " Windows 11 ISO";
+            btnDownloadSystem.Text = "Download " + languages[listLanguages.SelectedIndex].language + " Windows 11 ISO";
         }
 
         private void btnDownloadSystem_Click(object sender, EventArgs e) {
@@ -53,7 +53,7 @@ namespace Windows11Upgrade {
                           "/api/controls/contentinclude/html?pageId=a224afab-2097-4dfa-a2ba-463eb191a285&host=www.microsoft.com&segments=software-download,windows11&query=&action=GetProductDownloadLinksBySku";
             urlDownload += "&sessionId=" + guid;
             urlDownload += "&skuId=" + languages[listLanguages.SelectedIndex].id;
-            urlDownload += "&language=" + languages[listLanguages.SelectedIndex].name;
+            urlDownload += "&language=" + languages[listLanguages.SelectedIndex].language;
             urlDownload += "&sdVersion=2";
 
             var webClient = new WebClient();
@@ -83,7 +83,7 @@ namespace Windows11Upgrade {
         }
 
         public class Language {
-            public string name { get; set; }
+            public string language { get; set; }
             public string id { get; set; }
         }
     }
