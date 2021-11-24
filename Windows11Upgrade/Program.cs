@@ -5,8 +5,7 @@ namespace Windows11Upgrade {
     internal static class Program {
         [STAThread]
         private static void Main() {
-            bool is32bit = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"));
-            if (is32bit) {
+            if (!Environment.Is64BitOperatingSystem) {
                 MessageBox.Show("32-bit systems are not supported!");
                 Environment.Exit(0);
             }
