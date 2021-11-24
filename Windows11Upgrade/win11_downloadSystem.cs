@@ -12,11 +12,9 @@ namespace Windows11Upgrade {
 
         private void downloadProgressChanged(object sender, DownloadProgressChangedEventArgs e) {
             BeginInvoke((MethodInvoker) delegate {
-                var bytesIn = double.Parse(e.BytesReceived.ToString());
-                var totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
-                var percentage = bytesIn / totalBytes * 100;
-                lblDownloadPercentage.Text = Math.Round(percentage, 1) + " %";
-                progressDownload.Value = int.Parse(Math.Truncate(percentage).ToString());
+                var percentage = (double)(e.BytesReceived * 100) / e.TotalBytesToReceive;
+                lblDownloadPercentage.Text = $"{Math.Round(percentage, 1)} %";
+                progressDownload.Value = (int)percentage;
             });
         }
 
