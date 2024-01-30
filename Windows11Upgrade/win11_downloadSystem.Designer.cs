@@ -48,9 +48,9 @@ namespace Windows11Upgrade
             this.lblDownloadPercentage.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDownloadPercentage.Location = new System.Drawing.Point(9, 39);
             this.lblDownloadPercentage.Name = "lblDownloadPercentage";
-            this.lblDownloadPercentage.Size = new System.Drawing.Size(29, 20);
+            this.lblDownloadPercentage.Size = new System.Drawing.Size(33, 20);
             this.lblDownloadPercentage.TabIndex = 1;
-            this.lblDownloadPercentage.Text = "0%";
+            this.lblDownloadPercentage.Text = "0 %";
             // 
             // lblDownloadingSystem
             // 
